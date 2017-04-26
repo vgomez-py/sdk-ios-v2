@@ -6,44 +6,164 @@ import sdk_ios_v2
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
+        describe("tests for decidir 2.0 API") {
+            
+            it("when payment data is ok") {
+                
+                let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
+                
+                let pti = PaymentTokenInfo()
+                pti.cardNumber = "44213211231"
+                pti.cardExpirationMonth = "12"
+                pti.cardExpirationYear = "20"
+                pti.cardHolderName = "OSCAR CAMPOS"
+                pti.securityCode = "123"
+                
+                let holder = CardHolderIdentification()
+                holder.type = "dni"
+                holder.number = "123123123"
+                
+                pti.cardHolderIdentification = holder
+                
+                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                    
+                    expect(error).to(beNil())
+                    
+                    if let paymentToken = paymentToken {
+                        
+                        expect(paymentToken.id) != ""
+                    }
+                }
+                
+                waitUntil { done in
+                    Thread.sleep(forTimeInterval: 0.5)
+                    done()
+                }
+                
+                
             }
             
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
+            
+            it("when payment data is ok") {
+                
+                let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
+                
+                let pti = PaymentTokenInfo()
+                pti.cardNumber = "44213211231"
+                pti.cardExpirationMonth = "12"
+                pti.cardExpirationYear = "20"
+                pti.cardHolderName = "OSCAR CAMPOS"
+                pti.securityCode = "123"
+                
+                let holder = CardHolderIdentification()
+                holder.type = "dni"
+                holder.number = "123123123"
+                
+                pti.cardHolderIdentification = holder
+                
+                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                    
+                    expect(error).to(beNil())
+                    
+                    if let paymentToken = paymentToken {
+                        
+                        expect(paymentToken.id) != ""
                     }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
+                }
+                
+                waitUntil { done in
+                    Thread.sleep(forTimeInterval: 0.5)
+                    done()
+                }
+                
+                
+            }
+            
+            it("when apiKey is wrong") {
+                
+                let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741")
+                
+                let pti = PaymentTokenInfo()
+                pti.cardNumber = "44213211231"
+                pti.cardExpirationMonth = "12"
+                pti.cardExpirationYear = "20"
+                pti.cardHolderName = "OSCAR CAMPOS"
+                pti.securityCode = "123"
+                
+                let holder = CardHolderIdentification()
+                holder.type = "dni"
+                holder.number = "123123123"
+                
+                pti.cardHolderIdentification = holder
+                
+                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                    
+                    expect(paymentToken).to(beNil())
+                    
+                    guard error == nil else {
+                        
+                        if case let ErrorResponse.Error(statusCode, _, _) = error! {
+                            
+                            expect(403) == statusCode
+                            
+                        }
+                        
+                        return
                     }
                 }
+                
+                waitUntil { done in
+                    Thread.sleep(forTimeInterval: 0.5)
+                    done()
+                }
+                
+            }
+            
+            it("when cardNumer is expired") {
+                
+                let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
+                
+                let pti = PaymentTokenInfo()
+                pti.cardNumber = "44213211231"
+                pti.cardExpirationMonth = "12"
+                pti.cardExpirationYear = "12"
+                pti.cardHolderName = "OSCAR CAMPOS"
+                pti.securityCode = "123"
+                
+                let holder = CardHolderIdentification()
+                holder.type = "dni"
+                holder.number = "123123123"
+                
+                pti.cardHolderIdentification = holder
+                
+                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                    
+                    expect(paymentToken).to(beNil())
+                    
+                    guard error == nil else {
+                        
+                        if case let ErrorResponse.Error(_, _, dec as ModelError) = error! {
+                            
+                            expect("invalid_request_error") == dec.errorType
+                            
+                            expect(dec.validationErrors?.count) == 1
+                            
+                            let validationError = dec.validationErrors?.popLast()
+                            
+                            expect(validationError?.code) == "CardData"
+                            expect(validationError?.param) == "expired card"
+                            
+                        }
+                        
+                        return
+                    }
+                }
+                
+                waitUntil { done in
+                    Thread.sleep(forTimeInterval: 0.5)
+                    done()
+                }
+                
             }
         }
     }

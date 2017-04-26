@@ -14,6 +14,21 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		B9E454AE1EB1549D009EA43E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B9E4549C1EB1549D009EA43E /* .gitkeep */; };
+		B9E454AF1EB1549D009EA43E /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4549E1EB1549D009EA43E /* AlamofireImplementations.swift */; };
+		B9E454B01EB1549D009EA43E /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4549F1EB1549D009EA43E /* APIHelper.swift */; };
+		B9E454B11EB1549D009EA43E /* PaymentsTokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A11EB1549D009EA43E /* PaymentsTokenAPI.swift */; };
+		B9E454B21EB1549D009EA43E /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A21EB1549D009EA43E /* APIs.swift */; };
+		B9E454B31EB1549D009EA43E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A31EB1549D009EA43E /* Extensions.swift */; };
+		B9E454B41EB1549D009EA43E /* CardHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A51EB1549D009EA43E /* CardHolder.swift */; };
+		B9E454B51EB1549D009EA43E /* CardHolderIdentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A61EB1549D009EA43E /* CardHolderIdentification.swift */; };
+		B9E454B61EB1549D009EA43E /* FraudDetaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A71EB1549D009EA43E /* FraudDetaction.swift */; };
+		B9E454B71EB1549D009EA43E /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A81EB1549D009EA43E /* ModelError.swift */; };
+		B9E454B81EB1549D009EA43E /* PaymentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454A91EB1549D009EA43E /* PaymentToken.swift */; };
+		B9E454B91EB1549D009EA43E /* PaymentTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454AA1EB1549D009EA43E /* PaymentTokenInfo.swift */; };
+		B9E454BA1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454AB1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift */; };
+		B9E454BB1EB1549D009EA43E /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454AC1EB1549D009EA43E /* ValidationError.swift */; };
+		B9E454BC1EB1549D009EA43E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454AD1EB1549D009EA43E /* Models.swift */; };
 		C42DE86A4B55729823A9924F /* Pods_sdk_ios_v2_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9E852A3347EDFA9C31FF50 /* Pods_sdk_ios_v2_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +44,8 @@
 
 /* Begin PBXFileReference section */
 		1C8523B5BB739DA1494BECFE /* Pods-sdk_ios_v2_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2_Tests/Pods-sdk_ios_v2_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1D94F83038AFD857119F9872 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		30E327DB2E50CE69D1696A05 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1D94F83038AFD857119F9872 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		30E327DB2E50CE69D1696A05 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		551F284B5551500D112814AB /* Pods-sdk_ios_v2_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2_Example/Pods-sdk_ios_v2_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* sdk_ios_v2_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sdk_ios_v2_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,8 +57,23 @@
 		607FACE51AFB9204008FA782 /* sdk_ios_v2_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sdk_ios_v2_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		A3E6A7B2A0DE89E620DEE13B /* sdk_ios_v2.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = sdk_ios_v2.podspec; path = ../sdk_ios_v2.podspec; sourceTree = "<group>"; };
+		A3E6A7B2A0DE89E620DEE13B /* sdk_ios_v2.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = sdk_ios_v2.podspec; path = ../sdk_ios_v2.podspec; sourceTree = "<group>"; };
 		B1BD146181170D4510D158DC /* Pods_sdk_ios_v2_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdk_ios_v2_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E4549C1EB1549D009EA43E /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		B9E4549E1EB1549D009EA43E /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
+		B9E4549F1EB1549D009EA43E /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		B9E454A11EB1549D009EA43E /* PaymentsTokenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsTokenAPI.swift; sourceTree = "<group>"; };
+		B9E454A21EB1549D009EA43E /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		B9E454A31EB1549D009EA43E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B9E454A51EB1549D009EA43E /* CardHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolder.swift; sourceTree = "<group>"; };
+		B9E454A61EB1549D009EA43E /* CardHolderIdentification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolderIdentification.swift; sourceTree = "<group>"; };
+		B9E454A71EB1549D009EA43E /* FraudDetaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetaction.swift; sourceTree = "<group>"; };
+		B9E454A81EB1549D009EA43E /* ModelError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
+		B9E454A91EB1549D009EA43E /* PaymentToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentToken.swift; sourceTree = "<group>"; };
+		B9E454AA1EB1549D009EA43E /* PaymentTokenInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenInfo.swift; sourceTree = "<group>"; };
+		B9E454AB1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenInfoWithCardToken.swift; sourceTree = "<group>"; };
+		B9E454AC1EB1549D009EA43E /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		B9E454AD1EB1549D009EA43E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		BD9E852A3347EDFA9C31FF50 /* Pods_sdk_ios_v2_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdk_ios_v2_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6880D140B4C25D6CE0D53D /* Pods-sdk_ios_v2_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2_Example/Pods-sdk_ios_v2_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB9E249ACFF057BD5FA8124A /* Pods-sdk_ios_v2_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2_Tests/Pods-sdk_ios_v2_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +113,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				B9E4549B1EB1549D009EA43E /* Classes */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for sdk_ios_v2 */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -159,6 +190,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B9E4549B1EB1549D009EA43E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B9E4549C1EB1549D009EA43E /* .gitkeep */,
+				B9E4549D1EB1549D009EA43E /* sdk */,
+			);
+			name = Classes;
+			path = ../sdk_ios_v2/Classes;
+			sourceTree = "<group>";
+		};
+		B9E4549D1EB1549D009EA43E /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				B9E4549E1EB1549D009EA43E /* AlamofireImplementations.swift */,
+				B9E4549F1EB1549D009EA43E /* APIHelper.swift */,
+				B9E454A01EB1549D009EA43E /* APIs */,
+				B9E454A21EB1549D009EA43E /* APIs.swift */,
+				B9E454A31EB1549D009EA43E /* Extensions.swift */,
+				B9E454A41EB1549D009EA43E /* Models */,
+				B9E454AD1EB1549D009EA43E /* Models.swift */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		B9E454A01EB1549D009EA43E /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				B9E454A11EB1549D009EA43E /* PaymentsTokenAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		B9E454A41EB1549D009EA43E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9E454A51EB1549D009EA43E /* CardHolder.swift */,
+				B9E454A61EB1549D009EA43E /* CardHolderIdentification.swift */,
+				B9E454A71EB1549D009EA43E /* FraudDetaction.swift */,
+				B9E454A81EB1549D009EA43E /* ModelError.swift */,
+				B9E454A91EB1549D009EA43E /* PaymentToken.swift */,
+				B9E454AA1EB1549D009EA43E /* PaymentTokenInfo.swift */,
+				B9E454AB1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift */,
+				B9E454AC1EB1549D009EA43E /* ValidationError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +293,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Z34G6W9973;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -251,6 +330,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				B9E454AE1EB1549D009EA43E /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +441,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E454B01EB1549D009EA43E /* APIHelper.swift in Sources */,
+				B9E454B91EB1549D009EA43E /* PaymentTokenInfo.swift in Sources */,
+				B9E454B11EB1549D009EA43E /* PaymentsTokenAPI.swift in Sources */,
+				B9E454B61EB1549D009EA43E /* FraudDetaction.swift in Sources */,
+				B9E454AF1EB1549D009EA43E /* AlamofireImplementations.swift in Sources */,
+				B9E454B81EB1549D009EA43E /* PaymentToken.swift in Sources */,
+				B9E454B71EB1549D009EA43E /* ModelError.swift in Sources */,
+				B9E454B41EB1549D009EA43E /* CardHolder.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				B9E454B21EB1549D009EA43E /* APIs.swift in Sources */,
+				B9E454BA1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift in Sources */,
+				B9E454BC1EB1549D009EA43E /* Models.swift in Sources */,
+				B9E454BB1EB1549D009EA43E /* ValidationError.swift in Sources */,
+				B9E454B51EB1549D009EA43E /* CardHolderIdentification.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B9E454B31EB1549D009EA43E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +589,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF6880D140B4C25D6CE0D53D /* Pods-sdk_ios_v2_Example.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z34G6W9973;
 				INFOPLIST_FILE = sdk_ios_v2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -509,7 +603,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 551F284B5551500D112814AB /* Pods-sdk_ios_v2_Example.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z34G6W9973;
 				INFOPLIST_FILE = sdk_ios_v2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -536,6 +630,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sdk_ios_v2_Example.app/sdk_ios_v2_Example";
 			};
 			name = Debug;
 		};
@@ -552,6 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sdk_ios_v2_Example.app/sdk_ios_v2_Example";
 			};
 			name = Release;
 		};

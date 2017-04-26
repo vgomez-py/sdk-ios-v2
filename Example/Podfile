@@ -6,9 +6,10 @@ target 'sdk_ios_v2_Example' do
   target 'sdk_ios_v2_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.0.0'
+  pod 'Quick', '~> 1.0.0'
   pod 'Nimble', '~> 5.1.1'
   pod 'FBSnapshotTestCase'
   pod 'Nimble-Snapshots'
   end
 end
+
