@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		018FEDA70D4FE7ED94EC8E89 /* Pods_sdk_ios_v2_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BD146181170D4510D158DC /* Pods_sdk_ios_v2_Example.framework */; };
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B9E454AE1EB1549D009EA43E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B9E4549C1EB1549D009EA43E /* .gitkeep */; };
 		B9E454AF1EB1549D009EA43E /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4549E1EB1549D009EA43E /* AlamofireImplementations.swift */; };
@@ -29,6 +25,12 @@
 		B9E454BA1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454AB1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift */; };
 		B9E454BB1EB1549D009EA43E /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454AC1EB1549D009EA43E /* ValidationError.swift */; };
 		B9E454BC1EB1549D009EA43E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454AD1EB1549D009EA43E /* Models.swift */; };
+		B9E454C01EB16C30009EA43E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454BD1EB16C30009EA43E /* AppDelegate.swift */; };
+		B9E454C11EB16C30009EA43E /* CardTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454BE1EB16C30009EA43E /* CardTokenViewController.swift */; };
+		B9E454C21EB16C30009EA43E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454BF1EB16C30009EA43E /* HomeViewController.swift */; };
+		B9E454C51EB16C7D009EA43E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E454C31EB16C7D009EA43E /* LaunchScreen.xib */; };
+		B9E454C61EB16C7D009EA43E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E454C41EB16C7D009EA43E /* Main.storyboard */; };
+		B9E454C81EB16DBE009EA43E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E454C71EB16DBE009EA43E /* ViewController.swift */; };
 		C42DE86A4B55729823A9924F /* Pods_sdk_ios_v2_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9E852A3347EDFA9C31FF50 /* Pods_sdk_ios_v2_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,11 +51,7 @@
 		551F284B5551500D112814AB /* Pods-sdk_ios_v2_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2_Example/Pods-sdk_ios_v2_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* sdk_ios_v2_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sdk_ios_v2_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* sdk_ios_v2_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sdk_ios_v2_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -74,6 +72,12 @@
 		B9E454AB1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenInfoWithCardToken.swift; sourceTree = "<group>"; };
 		B9E454AC1EB1549D009EA43E /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		B9E454AD1EB1549D009EA43E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B9E454BD1EB16C30009EA43E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9E454BE1EB16C30009EA43E /* CardTokenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTokenViewController.swift; sourceTree = "<group>"; };
+		B9E454BF1EB16C30009EA43E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B9E454C31EB16C7D009EA43E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		B9E454C41EB16C7D009EA43E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B9E454C71EB16DBE009EA43E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD9E852A3347EDFA9C31FF50 /* Pods_sdk_ios_v2_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdk_ios_v2_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6880D140B4C25D6CE0D53D /* Pods-sdk_ios_v2_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2_Example/Pods-sdk_ios_v2_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB9E249ACFF057BD5FA8124A /* Pods-sdk_ios_v2_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2_Tests/Pods-sdk_ios_v2_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,11 +139,13 @@
 		607FACD21AFB9204008FA782 /* Example for sdk_ios_v2 */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				B9E454C31EB16C7D009EA43E /* LaunchScreen.xib */,
+				B9E454C41EB16C7D009EA43E /* Main.storyboard */,
+				B9E454BD1EB16C30009EA43E /* AppDelegate.swift */,
+				B9E454BE1EB16C30009EA43E /* CardTokenViewController.swift */,
+				B9E454BF1EB16C30009EA43E /* HomeViewController.swift */,
+				B9E454C71EB16DBE009EA43E /* ViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for sdk_ios_v2";
@@ -327,10 +333,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				B9E454C51EB16C7D009EA43E /* LaunchScreen.xib in Resources */,
 				B9E454AE1EB1549D009EA43E /* .gitkeep in Resources */,
+				B9E454C61EB16C7D009EA43E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,19 +449,21 @@
 			files = (
 				B9E454B01EB1549D009EA43E /* APIHelper.swift in Sources */,
 				B9E454B91EB1549D009EA43E /* PaymentTokenInfo.swift in Sources */,
+				B9E454C11EB16C30009EA43E /* CardTokenViewController.swift in Sources */,
+				B9E454C21EB16C30009EA43E /* HomeViewController.swift in Sources */,
 				B9E454B11EB1549D009EA43E /* PaymentsTokenAPI.swift in Sources */,
+				B9E454C01EB16C30009EA43E /* AppDelegate.swift in Sources */,
 				B9E454B61EB1549D009EA43E /* FraudDetaction.swift in Sources */,
 				B9E454AF1EB1549D009EA43E /* AlamofireImplementations.swift in Sources */,
 				B9E454B81EB1549D009EA43E /* PaymentToken.swift in Sources */,
 				B9E454B71EB1549D009EA43E /* ModelError.swift in Sources */,
 				B9E454B41EB1549D009EA43E /* CardHolder.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				B9E454B21EB1549D009EA43E /* APIs.swift in Sources */,
+				B9E454C81EB16DBE009EA43E /* ViewController.swift in Sources */,
 				B9E454BA1EB1549D009EA43E /* PaymentTokenInfoWithCardToken.swift in Sources */,
 				B9E454BC1EB1549D009EA43E /* Models.swift in Sources */,
 				B9E454BB1EB1549D009EA43E /* ValidationError.swift in Sources */,
 				B9E454B51EB1549D009EA43E /* CardHolderIdentification.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B9E454B31EB1549D009EA43E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,25 +485,6 @@
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {

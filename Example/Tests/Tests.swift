@@ -165,6 +165,45 @@ class TableOfContentsSpec: QuickSpec {
                 }
                 
             }
+            
+            it("when create payment with wrong card token") {
+                
+                let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
+                
+                let pti = PaymentTokenInfoWithCardToken()
+                pti.token = "someToken"
+                pti.securityCode = "123"
+                
+                paymentTokenApi.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti) { (paymentToken, error) in
+                    
+                    expect(paymentToken).to(beNil())
+                    
+                    guard error == nil else {
+                        
+                        if case let ErrorResponse.Error(_, _, dec as ModelError) = error! {
+                            
+                            expect("invalid_request_error") == dec.errorType
+                            
+                            expect(dec.validationErrors?.count) == 1
+                            
+                            let validationError = dec.validationErrors?.popLast()
+                            
+                            expect(validationError?.code) == "invalid_param"
+                            expect(validationError?.param) == "token"
+                            
+                        }
+                        
+                        return
+                    }
+                }
+                
+                waitUntil { done in
+                    Thread.sleep(forTimeInterval: 0.5)
+                    done()
+                }
+                
+            }
+            
         }
     }
 }

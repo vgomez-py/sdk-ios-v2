@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  sdk_ios_v2
+//  DEC2_sdk_ios
 //
-//  Created by Maxi on 04/26/2017.
-//  Copyright (c) 2017 Maxi. All rights reserved.
+//  Created by Ezequiel Apfel on 04/25/2017.
+//  Copyright (c) 2017 Ezequiel Apfel. All rights reserved.
 //
 
 import UIKit

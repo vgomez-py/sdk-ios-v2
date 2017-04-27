@@ -1,24 +1,83 @@
 //
 //  ViewController.swift
-//  sdk_ios_v2
+//  DEC2_sdk_ios
 //
-//  Created by Maxi on 04/26/2017.
-//  Copyright (c) 2017 Maxi. All rights reserved.
+//  Created by Ezequiel Apfel on 04/25/2017.
+//  Copyright (c) 2017 Ezequiel Apfel. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    //MARK: Properties
+    @IBOutlet weak var cardNumber: UITextField!
+    @IBOutlet weak var expirationMonth: UITextField!
+    @IBOutlet weak var expirationYear: UITextField!
+    @IBOutlet weak var securityCode: UITextField!
+    @IBOutlet weak var cardHolderName: UITextField!
+    @IBOutlet weak var docType: UITextField!
+    @IBOutlet weak var docNumber: UITextField!
+    @IBOutlet weak var textResult: UILabel!
+    
+    var paymentTokenApi:PaymentsTokenAPI = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        cardNumber.delegate = self
+        expirationMonth.delegate = self
+        expirationYear.delegate = self
+        securityCode.delegate = self
+        cardHolderName.delegate = self
+        docType.delegate = self
+        docNumber.delegate = self
     }
-
+    
+    @IBAction func proceedPayment(_ sender: UIButton) {
+        let pti = PaymentTokenInfo()
+        pti.cardNumber = cardNumber.text
+        pti.cardExpirationMonth = expirationMonth.text
+        pti.cardExpirationYear = expirationYear.text
+        pti.cardHolderName = cardHolderName.text
+        pti.securityCode = securityCode.text
+        
+        let holder = CardHolderIdentification()
+        holder.type = docType.text
+        holder.number = docNumber.text
+        
+        pti.cardHolderIdentification = holder
+        
+        self.paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+            
+            guard error == nil else {
+                
+                if case let ErrorResponse.Error(_, _, dec as ModelError) = error! {
+                    
+                    self.textResult.text = dec.toString()
+                    
+                }
+                return
+            }
+            
+            if let paymentToken = paymentToken {
+                self.textResult.text = paymentToken.toString()
+            }
+        }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 
