@@ -18,26 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Decidir 2.0 iOS SDK
                        DESC
 
-  s.homepage         = 'https://github.com/Maxi/sdk_ios_v2'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/decidir/SDK-IOS.v2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Maxi' => 'maxi.britez@redb.ee' }
-  s.source           = { :git => 'https://github.com/Maxi/sdk_ios_v2.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Decidir' => 'developers@decidir.com' }
+  s.source           = { :git => 'https://github.com/decidir/SDK-IOS.v2.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'sdk_ios_v2/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'sdk_ios_v2' => ['sdk_ios_v2/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Alamofire', '~> 4.0'
 end
