@@ -26,7 +26,7 @@ El flujo de una transacción a través de las **sdks** consta de dos pasos, la *
 + **Generaci&oacute;n de un token de pago.**  Se utiliza alguna de las siguentes **sdks front-end** :
  + [sdk IOS](https://github.com/decidir/SDK-IOS.v2)
  + [sdk Android](https://github.com/decidir/SDK-Android.v2)
- + [sdk Javascript](https://github.com/decidir/SDK-JavaScript.v2)
+ + [sdk Javascript](https://github.com/decidir/sdk-javascript-v2)
 + **Procesamiento de pago.**  Se utiliza alguna de las siguentes **sdks back-end** :
  + [sdk Java](https://github.com/decidir/SDK-JAVA.v2)
  + [sdk PHP](https://github.com/decidir/SDK-PHP.v2)
@@ -88,7 +88,7 @@ Luego en su proyecto puede referenciar a la sdk agregando el siguiente import
 import sdk_ios_v2
 ```
 
-<a name="versionesdeandroidsoportadas"></a>
+<a name="versionesdeiossoportadas"></a>
 ### Versiones de IOS soportadas
 La versi&oacute;n implementada de la SDK, est&aacute; testeada para versiones desde IOS 8.0
 [<sub>Volver a inicio</sub>](#inicio)
@@ -105,7 +105,7 @@ Se encuentra disponible en Gitbook el **[Manual de Integración Decidir2] (https
 
 ## Ambientes
 
-El SDK-IOS permite trabajar con todos los ambientes de Decidir.
+La **sdk IOS** permite trabajar con los ambientes de Sandbox y Producc&oacute;n de Decidir.
 El ambiente se debe instanciar indicando si se utiliza sandbox o producci&oacute;n.
 
 ```swift
@@ -116,7 +116,7 @@ open class MiClase {
   //Instancia para comunicar con ambiente Sandbox
   var decidirSandbox: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
   //Instancia para comunicar con ambiente  de produccion
-  var decidirProduccion: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey) //Se puede omitir el parametro isSandbox o enviar el argumento false
+  var decidirProduccion: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey) //Se puede omitir el parametro isSandbox o enviar el aEl ambiente se debe instanciar indicando su URL.rgumento false
 // ...codigo...
 }
 ```
