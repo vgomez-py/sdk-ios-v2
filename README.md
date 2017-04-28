@@ -4,6 +4,9 @@ Decidir SDK IOS
 
 Modulo para conexión con gateway de pago DECIDIR2
 
++ [Introducción](#introduccion)
+  + [Alcance](#scope)
+  + [Diagrama de secuencia](#secuencia)
 + [Instalación](#instalacion)
   + [Versiones de IOS soportadas](#versionesdeiosoportadas)
   + [Manual de Integración](#manualintegracion)
@@ -16,6 +19,54 @@ Modulo para conexión con gateway de pago DECIDIR2
       +  [Con tarjeta tokenizada](#tokentarjeta)
   + [Integración con Cybersource](#cybersource)
 
+<a name="introduccion"></a>
+## Introducción
+El flujo de una transacción a través de las **sdks** consta de dos pasos, la **generaci&oacute;n de un token de pago** por parte del cliente y el **procesamiento de pago** por parte del comercio. Existen sdks espec&iacute;ficas para realizar estas funciones en distintos lenguajes que se detallan a continuaci&oacute;n:
+
++ **Generaci&oacute;n de un token de pago.**  Se utiliza alguna de las siguentes **sdks front-end** :
+ + [sdk IOS](https://github.com/decidir/SDK-IOS.v2)
+ + [sdk Android](https://github.com/decidir/SDK-Android.v2)
+ + [sdk Javascript](https://github.com/decidir/SDK-JavaScript.v2)
++ **Procesamiento de pago.**  Se utiliza alguna de las siguentes **sdks back-end** :
+ + [sdk Java](https://github.com/decidir/SDK-JAVA.v2)
+ + [sdk PHP](https://github.com/decidir/SDK-PHP.v2)
+ + [sdk .Net](https://github.com/decidir/SDK-.NET.v2)
+ + [sdk Node](https://github.com/decidir/SDK-.NODE.v2)
+
+[<sub>Volver a inicio</sub>](#inicio)
+
+<a name="scope"></a>
+## Alcance
+La **sdk IOS** provee soporte para su **aplicaci&oacute;n front-end**, encargandose de la **generaci&oacute;n de un token de pago** por parte de un cliente. Este **token** debe ser enviado al comercio al realizar el pago.
+Esta sdk permite la comunicaci&oacute;n del cliente con la **API Decidir** utilizando su **API Key p&uacute;blica**<sup>1</sup>.
+
+Para procesar el pago con **Decidir**, el comercio podr&acute; realizarlo a trav&eacute;s de alguna de las siguentes **sdks front-backend**:
++ [sdk Java](https://github.com/decidir/SDK-JAVA.v2)
++ [sdk PHP](https://github.com/decidir/SDK-PHP.v2)
++ [sdk .Net](https://github.com/decidir/SDK-.NET.v2)
++ [sdk Node](https://github.com/decidir/SDK-.NODE.v2)
+
+![imagen de sdks](./docs/img/DiagramaSDKs.png)</br>
+
+---
+<sup>_1 - Las API Keys serán provistas por el equipo de Soporte de DECIDIR (soporte@decidir.com.ar). _</sup>
+
+[<sub>Volver a inicio</sub>](#inicio)
+
+<a name="secuencia"></a>
+
+## Diagrama de secuencia
+El flujo de una transacción a través de las **sdks** consta de dos pasos, a saber:
+
+1. **sdk front-end:** Se realiza una solicitud de token de pago con la Llave de Acceso pública (public API Key), enviando los datos sensibles de la tarjeta (PAN, mes y año de expiración, código de seguridad, titular, y tipo y número de documento) y obteniéndose como resultado un token que permitirá realizar la transacción posterior.
+
+2. **sdk back-end:** Se ejecuta el pago con la Llave de Acceso privada (private API Key), enviando el token generado en el Paso 1 más el identificador de la transacción a nivel comercio, el monto total, la moneda y la cantidad de cuotas.
+
+A continuación, se presenta un diagrama con el Flujo de un Pago.
+
+![imagen de configuracion](./docs/img/FlujoPago.png)</br>
+
+[<sub>Volver a inicio</sub>](#inicio)
 
 <a name="instalacion"></a>
 ## Instalación
