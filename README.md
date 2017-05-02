@@ -70,10 +70,17 @@ A continuación, se presenta un diagrama con el Flujo de un Pago.
 
 <a name="instalacion"></a>
 ## Instalación
-Se debe descargar la última versión del SDK desde el botón Download ZIP del branch master.
+Se debe descargar la última versión del SDK desde el botón Download ZIP del branch master y utilzar alguna de las siguientes opciones: [CocoaPods](#cocoapods), [Carthage](#carthage) o [manualmente](#manual). 
+
+Luego en su proyecto puede referenciar a la sdk agregando el siguiente import
+```swift
+import sdk_ios_v2
+```
+<a name="cocoapods"></a>
+### Instalando con CocoaPods
 Deber&aacute; tener instalado [CocoaPods](https://cocoapods.org/).
 
-Una vez descargado y descomprimido, se debe generar la librer$iacute;a con el comando `pod lib lint` sobre la misma.
+Una vez descargado y descomprimido el archivo zip, se debe generar la librer$iacute;a con el comando `pod lib lint` sobre la misma.
 Debe agregar en el archivo _Podfile_ de su proyecto el siguiente c&oacute;digo. Si no posee un archivo _Podfile_, puede crearlo con el comando `pod init`.
 
 ```
@@ -82,15 +89,25 @@ target 'MiProyecto' do
 end
 ```
 Ahora instalara las dependecias en su proyecto con el comando `pod install`
+<a name="carthage"></a>
+### Instalando con Carthage
+Deber&aacute; tener instalado [Carthage](https://github.com/Carthage/Carthage).
 
-Luego en su proyecto puede referenciar a la sdk agregando el siguiente import
-```swift
-import sdk_ios_v2
-```
+Una vez descargado y descomprimido el archivo zip, se debe generar la librer$iacute;a con el comando `carthage update` sobre la misma.
+Luego en su proyecto **Xcode**, debe agregar el archivo `.framework` generado desde la carpeta `Carthage/Builds`.
+Para m&aacute;s informaci&oacute;n consulte este[enlace](https://github.com/Carthage/Carthage).
+
+<a name="manual"></a>
+### Instalando manualmente
+Puede importar el proyecto **Xcode** desde `sdk_ios_v2.xcworkspace` y buildearlo manualente.
+
+
+[<sub>Volver a inicio</sub>](#inicio)
 
 <a name="versionesdeiossoportadas"></a>
 ### Versiones de IOS soportadas
 La versi&oacute;n implementada de la SDK, est&aacute; testeada para versiones desde IOS 8.0
+
 [<sub>Volver a inicio</sub>](#inicio)
 
 <a name="manualintegracion"></a>
