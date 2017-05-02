@@ -80,7 +80,7 @@ import sdk_ios_v2
 ### Instalando con CocoaPods
 Deber&aacute; tener instalado [CocoaPods](https://cocoapods.org/).
 
-Una vez descargado y descomprimido el archivo zip, se debe generar la librer$iacute;a con el comando `pod lib lint` sobre la misma.
+Una vez descargado y descomprimido el archivo zip, se debe generar la librer&iacute;a con el comando `pod lib lint` sobre la misma.
 Debe agregar en el archivo _Podfile_ de su proyecto el siguiente c&oacute;digo. Si no posee un archivo _Podfile_, puede crearlo con el comando `pod init`.
 
 ```
@@ -93,7 +93,7 @@ Ahora instalara las dependecias en su proyecto con el comando `pod install`
 ### Instalando con Carthage
 Deber&aacute; tener instalado [Carthage](https://github.com/Carthage/Carthage).
 
-Una vez descargado y descomprimido el archivo zip, se debe generar la librer$iacute;a con el comando `carthage update` sobre la misma.
+Una vez descargado y descomprimido el archivo zip, se debe generar la librer&iacute;a con el comando `carthage update` sobre la misma.
 Luego en su proyecto **Xcode**, debe agregar el archivo `.framework` generado desde la carpeta `Carthage/Builds`.
 Para m&aacute;s informaci&oacute;n consulte este[enlace](https://github.com/Carthage/Carthage).
 
