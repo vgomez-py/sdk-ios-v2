@@ -28,7 +28,8 @@ Decidir 2.0 iOS SDK
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'sdk_ios_v2/Classes/**/*'
+  s.source_files = 'sdk_ios_v2/**/*'
 
   s.dependency 'Alamofire', '~> 4.0'
 end
+
