@@ -94,8 +94,8 @@ Ahora instalara las dependecias en su proyecto con el comando `pod install`
 Deber&aacute; tener instalado [Carthage](https://github.com/Carthage/Carthage).
 
 Una vez descargado y descomprimido el archivo zip, se debe generar la librer&iacute;a con el comando `carthage update` sobre la misma.
-Luego en su proyecto **Xcode**, debe agregar el archivo `.framework` generado desde la carpeta `Carthage/Builds`.
-Para m&aacute;s informaci&oacute;n consulte este[enlace](https://github.com/Carthage/Carthage).
+Luego en su proyecto **Xcode**, debe agregar el archivo `.framework` generado desde la carpeta [Carthage/Builds](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#carthagebuild).
+Para m&aacute;s informaci&oacute;n consulte este [enlace](https://github.com/Carthage/Carthage).
 
 <a name="manual"></a>
 ### Instalando manualmente
