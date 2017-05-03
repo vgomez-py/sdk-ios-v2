@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92841831EBA0E77005DB4AF /* TrustDefenderMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92841821EBA0E77005DB4AF /* TrustDefenderMobile.framework */; };
+		B92841851EBA0E9C005DB4AF /* CyberSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92841841EBA0E9C005DB4AF /* CyberSource.swift */; };
+		B92841861EBA0EDD005DB4AF /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B928417F1EBA0CDC005DB4AF /* libz.1.dylib */; };
+		B92841891EBA1384005DB4AF /* FraudDetectionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92841881EBA1384005DB4AF /* FraudDetectionAPI.swift */; };
+		B928418B1EBA2877005DB4AF /* FraudDetectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */; };
 		B928BA051EB3C6EB00398867 /* sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928B9FB1EB3C6EB00398867 /* sdk_ios_v2.framework */; };
 		B928BA0C1EB3C6EB00398867 /* sdk_ios_v2.h in Headers */ = {isa = PBXBuildFile; fileRef = B928B9FE1EB3C6EB00398867 /* sdk_ios_v2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B928BA6F1EB3CA8500398867 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928BA6E1EB3CA8500398867 /* Alamofire.framework */; };
@@ -40,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B92841551EBA0A66005DB4AF /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TrustDefenderMobile.framework; path = "../../../Downloads/TrustDefender Mobile iOS v3.1-77 2/TrustDefenderMobile.framework"; sourceTree = "<group>"; };
+		B928417F1EBA0CDC005DB4AF /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		B92841821EBA0E77005DB4AF /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefenderMobile.framework; sourceTree = "<group>"; };
+		B92841841EBA0E9C005DB4AF /* CyberSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyberSource.swift; sourceTree = "<group>"; };
+		B92841881EBA1384005DB4AF /* FraudDetectionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetectionAPI.swift; sourceTree = "<group>"; };
+		B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetectionConfig.swift; sourceTree = "<group>"; };
 		B928B9FB1EB3C6EB00398867 /* sdk_ios_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sdk_ios_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928B9FE1EB3C6EB00398867 /* sdk_ios_v2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sdk_ios_v2.h; sourceTree = "<group>"; };
 		B928B9FF1EB3C6EB00398867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92841861EBA0EDD005DB4AF /* libz.1.dylib in Frameworks */,
+				B92841831EBA0E77005DB4AF /* TrustDefenderMobile.framework in Frameworks */,
 				B928BA6F1EB3CA8500398867 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +119,7 @@
 		B928B9F11EB3C6EB00398867 = {
 			isa = PBXGroup;
 			children = (
+				B92841821EBA0E77005DB4AF /* TrustDefenderMobile.framework */,
 				B928B9FD1EB3C6EB00398867 /* sdk_ios_v2 */,
 				B928BA081EB3C6EB00398867 /* sdk_ios_v2Tests */,
 				B928B9FC1EB3C6EB00398867 /* Products */,
@@ -134,6 +148,7 @@
 				B928BAB01EB3D64800398867 /* Models.swift */,
 				B928B9FE1EB3C6EB00398867 /* sdk_ios_v2.h */,
 				B928B9FF1EB3C6EB00398867 /* Info.plist */,
+				B92841841EBA0E9C005DB4AF /* CyberSource.swift */,
 			);
 			path = sdk_ios_v2;
 			sourceTree = "<group>";
@@ -150,6 +165,8 @@
 		B928BA6D1EB3CA8500398867 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B928417F1EBA0CDC005DB4AF /* libz.1.dylib */,
+				B92841551EBA0A66005DB4AF /* TrustDefenderMobile.framework */,
 				B928BA9F1EB3D33D00398867 /* Quick.framework */,
 				B928BA9D1EB3D33500398867 /* Nimble.framework */,
 				B928BA981EB3D0B900398867 /* Quick.framework */,
@@ -177,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				B928BAA41EB3D64800398867 /* PaymentsTokenAPI.swift */,
+				B92841881EBA1384005DB4AF /* FraudDetectionAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -192,6 +210,7 @@
 				B928BAAD1EB3D64800398867 /* PaymentTokenInfo.swift */,
 				B928BAAE1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift */,
 				B928BAAF1EB3D64800398867 /* ValidationError.swift */,
+				B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,6 +334,7 @@
 				B928BAB31EB3D64800398867 /* PaymentsTokenAPI.swift in Sources */,
 				B928BABD1EB3D64800398867 /* ValidationError.swift in Sources */,
 				B928BAB21EB3D64800398867 /* APIHelper.swift in Sources */,
+				B92841851EBA0E9C005DB4AF /* CyberSource.swift in Sources */,
 				B928BABC1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift in Sources */,
 				B928BAB81EB3D64800398867 /* FraudDetaction.swift in Sources */,
 				B928BAB91EB3D64800398867 /* ModelError.swift in Sources */,
@@ -322,6 +342,8 @@
 				B928BABA1EB3D64800398867 /* PaymentToken.swift in Sources */,
 				B928BAB61EB3D64800398867 /* CardHolder.swift in Sources */,
 				B928BAB41EB3D64800398867 /* APIs.swift in Sources */,
+				B928418B1EBA2877005DB4AF /* FraudDetectionConfig.swift in Sources */,
+				B92841891EBA1384005DB4AF /* FraudDetectionAPI.swift in Sources */,
 				B928BAB11EB3D64800398867 /* AlamofireImplementations.swift in Sources */,
 				B928BABE1EB3D64800398867 /* Models.swift in Sources */,
 			);
@@ -462,10 +484,12 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug",
 					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = sdk_ios_v2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prismamp.sdk-ios-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -489,10 +513,12 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug",
 					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = sdk_ios_v2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prismamp.sdk-ios-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

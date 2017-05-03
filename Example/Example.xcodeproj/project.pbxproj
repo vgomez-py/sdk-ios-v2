@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92841871EBA1138005DB4AF /* sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928BA4B1EB3C7B600398867 /* sdk_ios_v2.framework */; };
 		B928BA221EB3C71900398867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BA211EB3C71900398867 /* AppDelegate.swift */; };
 		B928BA291EB3C71900398867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B928BA281EB3C71900398867 /* Assets.xcassets */; };
 		B928BA2C1EB3C71900398867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B928BA2A1EB3C71900398867 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B928414F1EBA08DE005DB4AF /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TrustDefenderMobile.framework; path = "../../../../Downloads/TrustDefender Mobile iOS v3.1-77 2/TrustDefenderMobile.framework"; sourceTree = "<group>"; };
+		B92841531EBA091E005DB4AF /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		B928BA1E1EB3C71900398867 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928BA211EB3C71900398867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B928BA281EB3C71900398867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92841871EBA1138005DB4AF /* sdk_ios_v2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +128,8 @@
 		B928BA9A1EB3D1D400398867 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B92841531EBA091E005DB4AF /* libz.1.dylib */,
+				B928414F1EBA08DE005DB4AF /* TrustDefenderMobile.framework */,
 				B928BA9B1EB3D1D400398867 /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -372,6 +378,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z34G6W9973;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prismamp.Example;
@@ -385,6 +395,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z34G6W9973;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prismamp.Example;

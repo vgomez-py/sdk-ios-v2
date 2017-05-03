@@ -266,6 +266,19 @@ class Decoders {
             return instance
         }
 
+        // Decoder for [FraudDetectionConfig]
+        Decoders.addDecoder(clazz: [FraudDetectionConfig].self) { (source: AnyObject) -> [FraudDetectionConfig] in
+            return Decoders.decode(clazz: [FraudDetectionConfig].self, source: source)
+        }
+        // Decoder for FraudDetectionConfig
+        Decoders.addDecoder(clazz: FraudDetectionConfig.self) { (source: AnyObject) -> FraudDetectionConfig in
+            let sourceDictionary = source as! [AnyHashable: Any]
+            
+            let instance = FraudDetectionConfig()
+            instance.orgId = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["org_id"] as AnyObject?)
+            instance.merchantId = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["merchant_id"] as AnyObject?)
+            return instance
+        }
 
         // Decoder for [ValidationError]
         Decoders.addDecoder(clazz: [ValidationError].self) { (source: AnyObject) -> [ValidationError] in
