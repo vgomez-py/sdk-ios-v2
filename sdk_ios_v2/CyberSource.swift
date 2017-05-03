@@ -15,10 +15,9 @@ open class CyberSource: UIViewController, CyberSourceDelegate {
     open var delegate:CyberSourceDelegate?
     var profile:TrustDefenderMobile?
     
-    open func auth(apiKey: String) {
-        print("Aca deberíamos llamar al session")
+    open func auth(apiKey: String, isSandbox: Bool = false) {
         
-        FraudDetectionAPI(publicKey: apiKey).getConfig { (fraudDetectionConfig, error) in
+        FraudDetectionAPI(publicKey: apiKey, isSandbox: isSandbox).getConfig { (fraudDetectionConfig, error) in
             
             guard error == nil else {
                 NSLog("There was an error trying to get config")
