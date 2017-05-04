@@ -9,7 +9,6 @@ Modulo para conexión con gateway de pago DECIDIR2
   + [Diagrama de secuencia](#secuencia)
 + [Instalación](#instalacion)
   + [Versiones de IOS soportadas](#versionesdeiosoportadas)
-  + [Manual de Integración](#manualintegracion)
   + [Ambientes](#test)
 + [Uso](#uso)
   + [Inicializar la clase correspondiente al conector](#initconector)
@@ -24,14 +23,15 @@ Modulo para conexión con gateway de pago DECIDIR2
 El flujo de una transacción a través de las **sdks** consta de dos pasos, la **generaci&oacute;n de un token de pago** por parte del cliente y el **procesamiento de pago** por parte del comercio. Existen sdks espec&iacute;ficas para realizar estas funciones en distintos lenguajes que se detallan a continuaci&oacute;n:
 
 + **Generaci&oacute;n de un token de pago.**  Se utiliza alguna de las siguentes **sdks front-end** :
- + [sdk IOS](https://github.com/decidir/SDK-IOS.v2)
- + [sdk Android](https://github.com/decidir/SDK-Android.v2)
- + [sdk Javascript](https://github.com/decidir/sdk-javascript-v2)
+  + [sdk IOS](https://github.com/decidir/sdk-ios-v2)
+  + [sdk Android](https://github.com/decidir/sdk-android-v2)
+  + [sdk Javascript](https://github.com/decidir/sdk-javascript-v2)
 + **Procesamiento de pago.**  Se utiliza alguna de las siguentes **sdks back-end** :
- + [sdk Java](https://github.com/decidir/SDK-JAVA.v2)
- + [sdk PHP](https://github.com/decidir/SDK-PHP.v2)
- + [sdk .Net](https://github.com/decidir/SDK-.NET.v2)
- + [sdk Node](https://github.com/decidir/SDK-.NODE.v2)
+  + [sdk Java](https://github.com/decidir/sdk-java-v2)
+  + [sdk PHP](https://github.com/decidir/sdk-php-v2)
+  + [sdk .Net](https://github.com/decidir/sdk-.net-v2)
+  + [sdk Node](https://github.com/decidir/sdk-node-v2)
+
 
 [<sub>Volver a inicio</sub>](#inicio)
 
@@ -41,12 +41,13 @@ La **sdk IOS** provee soporte para su **aplicaci&oacute;n front-end**, encargand
 Esta sdk permite la comunicaci&oacute;n del cliente con la **API Decidir** utilizando su **API Key p&uacute;blica**<sup>1</sup>.
 
 Para procesar el pago con **Decidir**, el comercio podr&acute; realizarlo a trav&eacute;s de alguna de las siguentes **sdks front-backend**:
-+ [sdk Java](https://github.com/decidir/SDK-JAVA.v2)
-+ [sdk PHP](https://github.com/decidir/SDK-PHP.v2)
-+ [sdk .Net](https://github.com/decidir/SDK-.NET.v2)
-+ [sdk Node](https://github.com/decidir/SDK-.NODE.v2)
++ [sdk Java](https://github.com/decidir/sdk-java-v2)
++ [sdk PHP](https://github.com/decidir/sdk-php-v2)
++ [sdk .Net](https://github.com/decidir/sdk-.net-v2)
++ [sdk Node](https://github.com/decidir/sdk-node-v2)
 
-![imagen de sdks](./docs/img/DiagramaSDKs.png)</br>
+
+![imagen de sdks](./docs/img/DiagramaSDKs.png)
 
 ---
 <sup>_1 - Las API Keys serán provistas por el equipo de Soporte de DECIDIR (soporte@decidir.com.ar). _</sup>
@@ -70,7 +71,7 @@ A continuación, se presenta un diagrama con el Flujo de un Pago.
 
 <a name="instalacion"></a>
 ## Instalación
-Se debe descargar la última versión del SDK desde el botón Download ZIP del branch master y utilzar alguna de las siguientes opciones: [CocoaPods](#cocoapods), [Carthage](#carthage) o [manualmente](#manual). 
+Se debe descargar la última versión del SDK desde el botón Download ZIP del branch master y utilzar alguna de las siguientes opciones: [CocoaPods](#cocoapods), [Carthage](#carthage) o [manualmente](#manual).
 
 Luego en su proyecto puede referenciar a la sdk agregando el siguiente import
 ```swift
@@ -110,14 +111,6 @@ La versi&oacute;n implementada de la SDK, est&aacute; testeada para versiones de
 
 [<sub>Volver a inicio</sub>](#inicio)
 
-<a name="manualintegracion"></a>
-
-## Manual de Integración
-
-Se encuentra disponible en Gitbook el **[Manual de Integración Decidir2] (https://decidir.api-docs.io/1.0/guia-de-inicio/)** para su consulta online, en este detalla el proceso de integración. En el mismo se explican los servicios y operaciones disponibles, con ejemplos de requerimientos y respuestas, aquí solo se ejemplificará la forma de llamar a los distintos servicios usando la presente SDK.
-
-[<sub>Volver a inicio</sub>](#inicio)
-
 <a name="test"></a>
 
 ## Ambientes
@@ -151,11 +144,14 @@ La misma recibe como parámetros la API Key p&uacute;blica provista por Decidir 
 
 La API Key será provista por el equipo de Soporte de DECIDIR (soporte@decidir.com.ar).
 
+A partir de ahora y por el resto de la documentaci&oacute;n, se ejemplificar&aacute; utilizando una APIKey habilitada para operar en el ambiente Sandbox.
+
+
 ```swift
 // ...codigo...
-  var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
-  //Instancia para comunicar con ambiente  de produccion (default) utilizando la API Key publica
-  var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey)
+var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
+//Instancia para comunicar con ambiente Sandbox
+var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
 // ...codigo...
 }
 ```
@@ -185,11 +181,12 @@ Mediante este recurso, se genera un token de pago a partir de los datos de la ta
 ```swift
 // ...codigo...
 var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
-var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey)
+//Instancia para comunicar con ambiente Sandbox
+var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
 // ...codigo...
 //Datos de tarjeta
 let pti = PaymentTokenInfo()
-pti.cardNumber = "4509790112684851" //Nro de tarjeta. MANDATORIO
+pti.cardNumber = "4507990000004905" //Nro de tarjeta. MANDATORIO
 pti.cardExpirationMonth = "03" //Mes de vencimiento [01-12]. MANDATORIO
 pti.cardExpirationYear = "19" //Año de vencimiento[00-99]. MANDATORIO
 pti.cardHolderName = "TITULAR" //Nombre del titular tal como aparece en la tarjeta. MANDATORIO
@@ -230,11 +227,12 @@ Mediante este recurso, se genera una token de pago a partir una tarjeta tokeniza
 ```swift
 // ...codigo...
 var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
-var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey)
+//Instancia para comunicar con ambiente Sandbox
+var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
 // ...codigo...
 //Datos de tarjeta
 let pti = PaymentTokenInfoWithCardToken()
-pti.token = "f522e031-90cb-41ed-ba1f-46e813e8e789" //Tarjeta tokenizada MANDATORIO
+pti.token = "ae9fc3e5-ff41-4de2-9c91-81030be1c4a6" //Tarjeta tokenizada MANDATORIO
 pti.securityCode = "123" // CVV. OPCIONAL
 
 //generar token de pago
@@ -262,6 +260,70 @@ self.decidir.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti)
 
 ## Integración con Cybersource
 
-**No se encuentra disponible en este momento**
+Para habilitar el Servicio de Control de Fraude Cybersource, la vista inicial de su aplicaci&oacute;n deber&aacute; extenderla de `CyberSourceDelegate`. Luego al finalizar la carga de su vista, invocar&aacute; a CyberSource con su public APIKey y se le devolver&aacute; un **sessionId** correspondiente al dispositivo. Este **sessionId** debe enviarse a Decidir al momento de generar un token de pago.
+
+A continuaci&oacute;n se ejemplifica la integraci&oacute;n en la vista.
+```swift
+import UIKit
+import sdk_ios_v2
+
+class HomeViewController: UIViewController, CyberSourceDelegate {
+
+    var cyberSource:CyberSource?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.cyberSource = CyberSource()
+        self.cyberSource?.delegate = self
+        self.cyberSource?.auth(apiKey: "e9cdb99fff374b5f91da4480c8dca741")
+        // Do any additional setup after loading the view.
+    }
+
+
+    func authFinished(sessionId: String) {
+      NSLog("Session id created: %s", sessionId)
+      // Funcion callback que devuelve el sessionId
+      // A continuacion debe almacenar este campo para enviarlo al generar un token de pago
+      //...codigo...
+    }
+  //...codigo...
+}
+```
+
+Luego debe agregar `sessionId` dentro de `FraudDetection` y generar el token de pago
+
+```swift
+// ...codigo...
+var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
+var sessionId: String // debe asignarle el sessionId retornado por CyberSource
+//Instancia para comunicar con ambiente Sandbox
+var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
+// ...codigo...
+//Datos de tarjeta
+let pti = PaymentTokenInfoWithCardToken()
+pti.token = "ae9fc3e5-ff41-4de2-9c91-81030be1c4a6" //Tarjeta tokenizada MANDATORIO
+pti.securityCode = "123" // CVV. OPCIONAL
+//SessionId para integracion con CyberSource
+let fd = FraudDetection()
+fd.deviceUniqueIdentifier = sessionId
+pti.fraudDetection = fd
+
+//generar token de pago
+self.decidir.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti) { (paymentToken, error) in
+   //Manejo de error general
+  guard error == nil else {
+      if case let ErrorResponse.Error(_, _, dec as ModelError) = error! {
+        // Manejo de error especifico de Decidir
+          //..codigo...
+      }
+      //...codigo...
+      return
+  }
+  // Procesamiento de respuesta de la generacion de token de pago
+  if let paymentToken: PaymentToken = paymentToken {
+    //...codigo...
+  }
+}
+```
 
 [<sub>Volver a inicio</sub>](#inicio)
