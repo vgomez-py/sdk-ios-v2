@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func proceedPayment(_ sender: UIButton) {
-        let pti = PaymentTokenInfo()
+        let pti = PaymentToken()
         pti.cardNumber = cardNumber.text
         pti.cardExpirationMonth = expirationMonth.text
         pti.cardExpirationYear = expirationYear.text
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         pti.cardHolderIdentification = holder
         
-        self.paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+        self.paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
             
             guard error == nil else {
                 

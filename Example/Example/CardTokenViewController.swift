@@ -32,11 +32,11 @@ class CardTokenViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func proceedPayment(_ sender: UIButton) {
-        let pti = PaymentTokenInfoWithCardToken()
+        let pti = PaymentCardToken()
         pti.token = cardToken.text
         pti.securityCode = securityCode.text
         
-        self.paymentTokenApi.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti) { (paymentToken, error) in
+        self.paymentTokenApi.createPaymentCardToken(paymentCardToken: pti) { (paymentToken, error) in
             
             guard error == nil else {
                 

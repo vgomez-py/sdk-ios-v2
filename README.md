@@ -166,7 +166,7 @@ var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox
 
 ### Generaci&oacute;n de Token de Pago
 
-El SDK-IOS permite generar, desde el dispositivo, un token de pago con los datos de la tarjeta del cliente. &Eacute;ste se deber&aacute; enviar luego al backend del comercio para realizar la transacci&oacute;n de pago correpondiente.
+El sdk IOS permite generar, desde el dispositivo, un token de pago con los datos de la tarjeta del cliente. &Eacute;ste se deber&aacute; enviar luego al backend del comercio para realizar la transacci&oacute;n de pago correpondiente.
 
 El token de pago puede ser generado de 2 formas como se muestra a continuaci&oacute;n.
 
@@ -185,21 +185,21 @@ var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
 var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
 // ...codigo...
 //Datos de tarjeta
-let pti = PaymentTokenInfo()
-pti.cardNumber = "4507990000004905" //Nro de tarjeta. MANDATORIO
-pti.cardExpirationMonth = "03" //Mes de vencimiento [01-12]. MANDATORIO
-pti.cardExpirationYear = "19" //Año de vencimiento[00-99]. MANDATORIO
-pti.cardHolderName = "TITULAR" //Nombre del titular tal como aparece en la tarjeta. MANDATORIO
-pti.securityCode = "123" // CVV. OPCIONAL
+let pt = PaymentToken()
+pt.cardNumber = "4507990000004905" //Nro de tarjeta. MANDATORIO
+pt.cardExpirationMonth = "03" //Mes de vencimiento [01-12]. MANDATORIO
+pt.cardExpirationYear = "19" //Año de vencimiento[00-99]. MANDATORIO
+pt.cardHolderName = "TITULAR" //Nombre del titular tal como aparece en la tarjeta. MANDATORIO
+pt.securityCode = "123" // CVV. OPCIONAL
 
 let holder = CardHolderIdentification() //Identificacion del titular de la tarjeta. Es opcional, pero debe estar completo si se agrega
 holder.type = "dni" //MANDATORIO
 holder.number = "12345678" //MANDATORIO
 
-pti.cardHolderIdentification = holder //OPCIONAL
+pt.cardHolderIdentification = holder //OPCIONAL
 
 //generar token de pago
-self.decidir.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+self.decidir.createPaymentToken(paymentToken: pt) { (paymentTokenResponse, error) in
    //Manejo de error general
   guard error == nil else {
       if case let ErrorResponse.Error(_, _, dec as ModelError) = error! {
@@ -210,8 +210,9 @@ self.decidir.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) i
       return
   }
   // Procesamiento de respuesta de la generacion de token de pago
-  if let paymentToken: PaymentToken = paymentToken {
+  if let paymentTokenResponse = paymentTokenResponse {
     //...codigo...
+    //Token de pago se encuentra en paymentTokenResponse.id
   }
 }
 ```
@@ -231,12 +232,12 @@ var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
 var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
 // ...codigo...
 //Datos de tarjeta
-let pti = PaymentTokenInfoWithCardToken()
-pti.token = "ae9fc3e5-ff41-4de2-9c91-81030be1c4a6" //Tarjeta tokenizada MANDATORIO
-pti.securityCode = "123" // CVV. OPCIONAL
+let pct = PaymentCardToken()
+pct.token = "ae9fc3e5-ff41-4de2-9c91-81030be1c4a6" //Tarjeta tokenizada MANDATORIO
+pct.securityCode = "123" // CVV. OPCIONAL
 
 //generar token de pago
-self.decidir.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti) { (paymentToken, error) in
+self.decidir.createPaymentCardToken(paymentCardToken: pct) { (paymentTokenResponse, error) in
    //Manejo de error general
   guard error == nil else {
       if case let ErrorResponse.Error(_, _, dec as ModelError) = error! {
@@ -247,8 +248,9 @@ self.decidir.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti)
       return
   }
   // Procesamiento de respuesta de la generacion de token de pago
-  if let paymentToken: PaymentToken = paymentToken {
+  if let paymentTokenResponse = paymentTokenResponse {
     //...codigo...
+    //Token de pago se encuentra en paymentTokenResponse.id
   }
 }
 ```
@@ -260,6 +262,71 @@ self.decidir.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti)
 
 ## Integración con Cybersource
 
-**No se encuentra disponible en este momento**
+Para habilitar el Servicio de Control de Fraude Cybersource, la vista inicial de su aplicaci&oacute;n deber&aacute; extenderla de `CyberSourceDelegate`. Luego al finalizar la carga de su vista, invocar&aacute; a CyberSource con su public APIKey y se le devolver&aacute; un **sessionId** correspondiente al dispositivo. Este **sessionId** debe enviarse a Decidir al momento de generar un token de pago.
+
+A continuaci&oacute;n se ejemplifica la integraci&oacute;n en la vista.
+```swift
+import UIKit
+import sdk_ios_v2
+
+class HomeViewController: UIViewController, CyberSourceDelegate {
+
+    var cyberSource:CyberSource?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.cyberSource = CyberSource()
+        self.cyberSource?.delegate = self
+        self.cyberSource?.auth(publicKey: "e9cdb99fff374b5f91da4480c8dca741")
+        // Do any additional setup after loading the view.
+    }
+
+
+    func authFinished(sessionId: String) {
+      NSLog("Session id created: %s", sessionId)
+      // Funcion callback que devuelve el sessionId
+      // A continuacion debe almacenar este campo para enviarlo al generar un token de pago
+      //...codigo...
+    }
+  //...codigo...
+}
+```
+
+Luego debe agregar `sessionId` dentro de `FraudDetection` y generar el token de pago
+
+```swift
+// ...codigo...
+var publicKey: "e9cdb99fff374b5f91da4480c8dca741"
+var sessionId: String // debe asignarle el sessionId retornado por CyberSource
+//Instancia para comunicar con ambiente Sandbox
+var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox: true)
+// ...codigo...
+//Datos de tarjeta
+let pct = PaymentCardToken()
+pct.token = "ae9fc3e5-ff41-4de2-9c91-81030be1c4a6" //Tarjeta tokenizada MANDATORIO
+pct.securityCode = "123" // CVV. OPCIONAL
+//SessionId para integracion con CyberSource
+let fd = FraudDetection()
+fd.deviceUniqueIdentifier = sessionId
+pct.fraudDetection = fd
+
+//generar token de pago
+self.decidir.createPaymentCardToken(paymentCardToken: pct) { (paymentToken, error) in
+   //Manejo de error general
+  guard error == nil else {
+      if case let ErrorResponse.Error(_, _, dec as ModelError) = error! {
+        // Manejo de error especifico de Decidir
+          //..codigo...
+      }
+      //...codigo...
+      return
+  }
+  // Procesamiento de respuesta de la generacion de token de pago
+  if let paymentTokenResponse = C {
+    //...codigo...
+    //Token de pago se encuentra en paymentTokenResponse.id
+  }
+}
+```
 
 [<sub>Volver a inicio</sub>](#inicio)
