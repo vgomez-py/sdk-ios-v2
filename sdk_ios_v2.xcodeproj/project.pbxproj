@@ -25,11 +25,11 @@
 		B928BAB51EB3D64800398867 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA61EB3D64800398867 /* Extensions.swift */; };
 		B928BAB61EB3D64800398867 /* CardHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA81EB3D64800398867 /* CardHolder.swift */; };
 		B928BAB71EB3D64800398867 /* CardHolderIdentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */; };
-		B928BAB81EB3D64800398867 /* FraudDetaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAA1EB3D64800398867 /* FraudDetaction.swift */; };
+		B928BAB81EB3D64800398867 /* FraudDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAA1EB3D64800398867 /* FraudDetection.swift */; };
 		B928BAB91EB3D64800398867 /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAB1EB3D64800398867 /* ModelError.swift */; };
 		B928BABA1EB3D64800398867 /* PaymentTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */; };
 		B928BABB1EB3D64800398867 /* PaymentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAD1EB3D64800398867 /* PaymentToken.swift */; };
-		B928BABC1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAE1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift */; };
+		B928BABC1EB3D64800398867 /* PaymentCardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAE1EB3D64800398867 /* PaymentCardToken.swift */; };
 		B928BABD1EB3D64800398867 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAF1EB3D64800398867 /* ValidationError.swift */; };
 		B928BABE1EB3D64800398867 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAB01EB3D64800398867 /* Models.swift */; };
 /* End PBXBuildFile section */
@@ -83,11 +83,11 @@
 		B928BAA61EB3D64800398867 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B928BAA81EB3D64800398867 /* CardHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolder.swift; sourceTree = "<group>"; };
 		B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolderIdentification.swift; sourceTree = "<group>"; };
-		B928BAAA1EB3D64800398867 /* FraudDetaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetaction.swift; sourceTree = "<group>"; };
+		B928BAAA1EB3D64800398867 /* FraudDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetection.swift; sourceTree = "<group>"; };
 		B928BAAB1EB3D64800398867 /* ModelError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
 		B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenResponse.swift; sourceTree = "<group>"; };
 		B928BAAD1EB3D64800398867 /* PaymentToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentToken.swift; sourceTree = "<group>"; };
-		B928BAAE1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenInfoWithCardToken.swift; sourceTree = "<group>"; };
+		B928BAAE1EB3D64800398867 /* PaymentCardToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardToken.swift; sourceTree = "<group>"; };
 		B928BAAF1EB3D64800398867 /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		B928BAB01EB3D64800398867 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,11 +204,11 @@
 			children = (
 				B928BAA81EB3D64800398867 /* CardHolder.swift */,
 				B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */,
-				B928BAAA1EB3D64800398867 /* FraudDetaction.swift */,
+				B928BAAA1EB3D64800398867 /* FraudDetection.swift */,
 				B928BAAB1EB3D64800398867 /* ModelError.swift */,
 				B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */,
 				B928BAAD1EB3D64800398867 /* PaymentToken.swift */,
-				B928BAAE1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift */,
+				B928BAAE1EB3D64800398867 /* PaymentCardToken.swift */,
 				B928BAAF1EB3D64800398867 /* ValidationError.swift */,
 				B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */,
 			);
@@ -335,8 +335,8 @@
 				B928BABD1EB3D64800398867 /* ValidationError.swift in Sources */,
 				B928BAB21EB3D64800398867 /* APIHelper.swift in Sources */,
 				B92841851EBA0E9C005DB4AF /* CyberSource.swift in Sources */,
-				B928BABC1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift in Sources */,
-				B928BAB81EB3D64800398867 /* FraudDetaction.swift in Sources */,
+				B928BABC1EB3D64800398867 /* PaymentCardToken.swift in Sources */,
+				B928BAB81EB3D64800398867 /* FraudDetection.swift in Sources */,
 				B928BAB91EB3D64800398867 /* ModelError.swift in Sources */,
 				B928BABB1EB3D64800398867 /* PaymentToken.swift in Sources */,
 				B928BABA1EB3D64800398867 /* PaymentTokenResponse.swift in Sources */,
