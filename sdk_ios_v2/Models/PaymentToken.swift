@@ -1,58 +1,41 @@
 //
-// PaymentToken.swift
+// PaymentTokenInfo.swift
 //
+
 
 import Foundation
 
 
 open class PaymentToken: JSONEncodable {
-    public var id: String?
-    public var status: String?
-    public var cardNumberLength: Double?
-    public var dateCreated: String?
-    public var bin: String?
-    public var lastFourDigits: String?
-    public var securityCodeLength: Double?
-    public var expirationMonth: Double?
-    public var expirationYear: Double?
-    public var dateDue: String?
-    public var cardholder: CardHolder?
+    public var cardNumber: String?
+    public var cardExpirationMonth: String?
+    public var cardExpirationYear: String?
+    public var securityCode: String?
+    public var cardHolderName: String?
+    public var cardHolderIdentification: CardHolderIdentification?
+    public var fraudDetection: FraudDetection?
 
-    public init() {}
+    public init() {
+    
+        self.cardNumber = ""
+        self.cardExpirationMonth = ""
+        self.cardExpirationYear = ""
+        self.securityCode = ""
+        self.cardHolderName = ""
+        self.cardHolderIdentification = CardHolderIdentification()
+    }
 
     // MARK: JSONEncodable
     open func encodeToJSON() -> Any {
         var nillableDictionary = [String:Any?]()
-        nillableDictionary["id"] = self.id
-        nillableDictionary["status"] = self.status
-        nillableDictionary["card_number_length"] = self.cardNumberLength
-        nillableDictionary["date_created"] = self.dateCreated
-        nillableDictionary["bin"] = self.bin
-        nillableDictionary["last_four_digits"] = self.lastFourDigits
-        nillableDictionary["security_code_length"] = self.securityCodeLength
-        nillableDictionary["expiration_month"] = self.expirationMonth
-        nillableDictionary["expiration_year"] = self.expirationYear
-        nillableDictionary["date_due"] = self.dateDue
-        nillableDictionary["cardholder"] = self.cardholder?.encodeToJSON()
+        nillableDictionary["card_number"] = self.cardNumber
+        nillableDictionary["card_expiration_month"] = self.cardExpirationMonth
+        nillableDictionary["card_expiration_year"] = self.cardExpirationYear
+        nillableDictionary["security_code"] = self.securityCode
+        nillableDictionary["card_holder_name"] = self.cardHolderName
+        nillableDictionary["card_holder_identification"] = self.cardHolderIdentification?.encodeToJSON()
+        nillableDictionary["fraud_detection"] = self.fraudDetection?.encodeToJSON()
         let dictionary: [String:Any] = APIHelper.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }
-    
-    open func toString() -> String {
-        
-        var paymentTokenText = "[\n"
-        
-        paymentTokenText += "id: \(self.id!) \n"
-        paymentTokenText += "status: \(self.status!) \n"
-        paymentTokenText += "bin: \(self.bin!) \n"
-        paymentTokenText += "lastFourDigits: \(self.lastFourDigits!) \n"
-        paymentTokenText += "dateCreated \(self.dateCreated!) \n"
-        paymentTokenText += "dateDue \(self.dateDue!) \n"
-        
-        
-        paymentTokenText += "]"
-        
-        return paymentTokenText
-    }
 }
-

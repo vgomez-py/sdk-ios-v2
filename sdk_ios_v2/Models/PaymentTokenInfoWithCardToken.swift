@@ -5,10 +5,10 @@
 import Foundation
 
 
-open class PaymentTokenInfoWithCardToken: JSONEncodable {
+open class PaymentCardToken: JSONEncodable {
     public var token: String?
     public var securityCode: String?
-    public var fraudDetection: FraudDetaction?
+    public var fraudDetection: FraudDetection?
     
     public init() {
     

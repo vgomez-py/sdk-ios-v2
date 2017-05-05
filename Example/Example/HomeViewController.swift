@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, CyberSourceDelegate {
         super.viewDidLoad()
         self.cyberSource = CyberSource()
         self.cyberSource?.delegate = self
-        self.cyberSource?.auth(apiKey: "e9cdb99fff374b5f91da4480c8dca741")
+        self.cyberSource?.auth(publicKey: "e9cdb99fff374b5f91da4480c8dca741")
         // Do any additional setup after loading the view.
     }
 

@@ -5,7 +5,7 @@
 import Foundation
 
 
-open class FraudDetaction: JSONEncodable {
+open class FraudDetection: JSONEncodable {
     public var deviceUniqueIdentifier: String?
 
     public init() {}

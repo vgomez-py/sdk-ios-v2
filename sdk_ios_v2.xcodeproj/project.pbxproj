@@ -27,8 +27,8 @@
 		B928BAB71EB3D64800398867 /* CardHolderIdentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */; };
 		B928BAB81EB3D64800398867 /* FraudDetaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAA1EB3D64800398867 /* FraudDetaction.swift */; };
 		B928BAB91EB3D64800398867 /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAB1EB3D64800398867 /* ModelError.swift */; };
-		B928BABA1EB3D64800398867 /* PaymentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAC1EB3D64800398867 /* PaymentToken.swift */; };
-		B928BABB1EB3D64800398867 /* PaymentTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAD1EB3D64800398867 /* PaymentTokenInfo.swift */; };
+		B928BABA1EB3D64800398867 /* PaymentTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */; };
+		B928BABB1EB3D64800398867 /* PaymentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAD1EB3D64800398867 /* PaymentToken.swift */; };
 		B928BABC1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAE1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift */; };
 		B928BABD1EB3D64800398867 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAF1EB3D64800398867 /* ValidationError.swift */; };
 		B928BABE1EB3D64800398867 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAB01EB3D64800398867 /* Models.swift */; };
@@ -85,8 +85,8 @@
 		B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolderIdentification.swift; sourceTree = "<group>"; };
 		B928BAAA1EB3D64800398867 /* FraudDetaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetaction.swift; sourceTree = "<group>"; };
 		B928BAAB1EB3D64800398867 /* ModelError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
-		B928BAAC1EB3D64800398867 /* PaymentToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentToken.swift; sourceTree = "<group>"; };
-		B928BAAD1EB3D64800398867 /* PaymentTokenInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenInfo.swift; sourceTree = "<group>"; };
+		B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenResponse.swift; sourceTree = "<group>"; };
+		B928BAAD1EB3D64800398867 /* PaymentToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentToken.swift; sourceTree = "<group>"; };
 		B928BAAE1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenInfoWithCardToken.swift; sourceTree = "<group>"; };
 		B928BAAF1EB3D64800398867 /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		B928BAB01EB3D64800398867 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 				B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */,
 				B928BAAA1EB3D64800398867 /* FraudDetaction.swift */,
 				B928BAAB1EB3D64800398867 /* ModelError.swift */,
-				B928BAAC1EB3D64800398867 /* PaymentToken.swift */,
-				B928BAAD1EB3D64800398867 /* PaymentTokenInfo.swift */,
+				B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */,
+				B928BAAD1EB3D64800398867 /* PaymentToken.swift */,
 				B928BAAE1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift */,
 				B928BAAF1EB3D64800398867 /* ValidationError.swift */,
 				B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */,
@@ -338,8 +338,8 @@
 				B928BABC1EB3D64800398867 /* PaymentTokenInfoWithCardToken.swift in Sources */,
 				B928BAB81EB3D64800398867 /* FraudDetaction.swift in Sources */,
 				B928BAB91EB3D64800398867 /* ModelError.swift in Sources */,
-				B928BABB1EB3D64800398867 /* PaymentTokenInfo.swift in Sources */,
-				B928BABA1EB3D64800398867 /* PaymentToken.swift in Sources */,
+				B928BABB1EB3D64800398867 /* PaymentToken.swift in Sources */,
+				B928BABA1EB3D64800398867 /* PaymentTokenResponse.swift in Sources */,
 				B928BAB61EB3D64800398867 /* CardHolder.swift in Sources */,
 				B928BAB41EB3D64800398867 /* APIs.swift in Sources */,
 				B928418B1EBA2877005DB4AF /* FraudDetectionConfig.swift in Sources */,

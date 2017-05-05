@@ -179,14 +179,14 @@ class Decoders {
 
 
         // Decoder for [FraudDetaction]
-        Decoders.addDecoder(clazz: [FraudDetaction].self) { (source: AnyObject) -> [FraudDetaction] in
-            return Decoders.decode(clazz: [FraudDetaction].self, source: source)
+        Decoders.addDecoder(clazz: [FraudDetection].self) { (source: AnyObject) -> [FraudDetection] in
+            return Decoders.decode(clazz: [FraudDetection].self, source: source)
         }
         // Decoder for FraudDetaction
-        Decoders.addDecoder(clazz: FraudDetaction.self) { (source: AnyObject) -> FraudDetaction in
+        Decoders.addDecoder(clazz: FraudDetection.self) { (source: AnyObject) -> FraudDetection in
             let sourceDictionary = source as! [AnyHashable: Any]
 
-            let instance = FraudDetaction()
+            let instance = FraudDetection()
             instance.deviceUniqueIdentifier = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["device_unique_identifier"] as AnyObject?)
             return instance
         }
@@ -208,15 +208,15 @@ class Decoders {
         }
 
 
-        // Decoder for [PaymentToken]
-        Decoders.addDecoder(clazz: [PaymentToken].self) { (source: AnyObject) -> [PaymentToken] in
-            return Decoders.decode(clazz: [PaymentToken].self, source: source)
+        // Decoder for [PaymentTokenResponse]
+        Decoders.addDecoder(clazz: [PaymentTokenResponse].self) { (source: AnyObject) -> [PaymentTokenResponse] in
+            return Decoders.decode(clazz: [PaymentTokenResponse].self, source: source)
         }
-        // Decoder for PaymentToken
-        Decoders.addDecoder(clazz: PaymentToken.self) { (source: AnyObject) -> PaymentToken in
+        // Decoder for PaymentTokenResponse
+        Decoders.addDecoder(clazz: PaymentTokenResponse.self) { (source: AnyObject) -> PaymentTokenResponse in
             let sourceDictionary = source as! [AnyHashable: Any]
 
-            let instance = PaymentToken()
+            let instance = PaymentTokenResponse()
             instance.id = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["id"] as AnyObject?)
             instance.status = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["status"] as AnyObject?)
             instance.cardNumberLength = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["card_number_length"] as AnyObject?)
@@ -233,36 +233,36 @@ class Decoders {
 
 
         // Decoder for [PaymentTokenInfo]
-        Decoders.addDecoder(clazz: [PaymentTokenInfo].self) { (source: AnyObject) -> [PaymentTokenInfo] in
-            return Decoders.decode(clazz: [PaymentTokenInfo].self, source: source)
+        Decoders.addDecoder(clazz: [PaymentToken].self) { (source: AnyObject) -> [PaymentToken] in
+            return Decoders.decode(clazz: [PaymentToken].self, source: source)
         }
         // Decoder for PaymentTokenInfo
-        Decoders.addDecoder(clazz: PaymentTokenInfo.self) { (source: AnyObject) -> PaymentTokenInfo in
+        Decoders.addDecoder(clazz: PaymentToken.self) { (source: AnyObject) -> PaymentToken in
             let sourceDictionary = source as! [AnyHashable: Any]
 
-            let instance = PaymentTokenInfo()
+            let instance = PaymentToken()
             instance.cardNumber = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["card_number"] as AnyObject?)
             instance.cardExpirationMonth = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["card_expiration_month"] as AnyObject?)
             instance.cardExpirationYear = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["card_expiration_year"] as AnyObject?)
             instance.securityCode = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["security_code"] as AnyObject?)
             instance.cardHolderName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["card_holder_name"] as AnyObject?)
             instance.cardHolderIdentification = Decoders.decodeOptional(clazz: CardHolderIdentification.self, source: sourceDictionary["card_holder_identification"] as AnyObject?)
-            instance.fraudDetection = Decoders.decodeOptional(clazz: FraudDetaction.self, source: sourceDictionary["fraud_detection"] as AnyObject?)
+            instance.fraudDetection = Decoders.decodeOptional(clazz: FraudDetection.self, source: sourceDictionary["fraud_detection"] as AnyObject?)
             return instance
         }
         
-        // Decoder for [PaymentTokenInfoWithCardToken]
-        Decoders.addDecoder(clazz: [PaymentTokenInfoWithCardToken].self) { (source: AnyObject) -> [PaymentTokenInfoWithCardToken] in
-            return Decoders.decode(clazz: [PaymentTokenInfoWithCardToken].self, source: source)
+        // Decoder for [PaymentCardToken]
+        Decoders.addDecoder(clazz: [PaymentCardToken].self) { (source: AnyObject) -> [PaymentCardToken] in
+            return Decoders.decode(clazz: [PaymentCardToken].self, source: source)
         }
-        // Decoder for PaymentTokenInfoWithCardToken
-        Decoders.addDecoder(clazz: PaymentTokenInfoWithCardToken.self) { (source: AnyObject) -> PaymentTokenInfoWithCardToken in
+        // Decoder for PaymentCardToken
+        Decoders.addDecoder(clazz: PaymentCardToken.self) { (source: AnyObject) -> PaymentCardToken in
             let sourceDictionary = source as! [AnyHashable: Any]
             
-            let instance = PaymentTokenInfoWithCardToken()
+            let instance = PaymentCardToken()
             instance.token = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["token"] as AnyObject?)
             instance.securityCode = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["security_code"] as AnyObject?)
-            instance.fraudDetection = Decoders.decodeOptional(clazz: FraudDetaction.self, source: sourceDictionary["fraud_detection"] as AnyObject?)
+            instance.fraudDetection = Decoders.decodeOptional(clazz: FraudDetection.self, source: sourceDictionary["fraud_detection"] as AnyObject?)
             return instance
         }
 
