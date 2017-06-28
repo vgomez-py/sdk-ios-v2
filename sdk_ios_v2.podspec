@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'sdk_ios_v2'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of sdk_ios_v2.'
+  s.summary          = 'SDK Iios spec for make payments to Decidir v2.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,6 +19,9 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 Decidir 2.0 iOS SDK
+* Also supports cybersource trust handler
+* Includes tests to show how to use SDK
+* Usage of alamofire for http requests
                        DESC
 
   s.homepage         = 'https://github.com/decidir/SDK-IOS.v2'
@@ -32,4 +35,3 @@ Decidir 2.0 iOS SDK
 
   s.dependency 'Alamofire', '~> 4.0'
 end
-
