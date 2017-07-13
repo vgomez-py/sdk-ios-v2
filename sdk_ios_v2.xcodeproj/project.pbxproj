@@ -7,236 +7,224 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B92841831EBA0E77005DB4AF /* TrustDefenderMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92841821EBA0E77005DB4AF /* TrustDefenderMobile.framework */; };
-		B92841851EBA0E9C005DB4AF /* CyberSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92841841EBA0E9C005DB4AF /* CyberSource.swift */; };
-		B92841861EBA0EDD005DB4AF /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B928417F1EBA0CDC005DB4AF /* libz.1.dylib */; };
-		B92841891EBA1384005DB4AF /* FraudDetectionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92841881EBA1384005DB4AF /* FraudDetectionAPI.swift */; };
-		B928418B1EBA2877005DB4AF /* FraudDetectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */; };
-		B928BA051EB3C6EB00398867 /* sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928B9FB1EB3C6EB00398867 /* sdk_ios_v2.framework */; };
-		B928BA0C1EB3C6EB00398867 /* sdk_ios_v2.h in Headers */ = {isa = PBXBuildFile; fileRef = B928B9FE1EB3C6EB00398867 /* sdk_ios_v2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B928BA6F1EB3CA8500398867 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928BA6E1EB3CA8500398867 /* Alamofire.framework */; };
-		B928BA851EB3CD6C00398867 /* sdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BA841EB3CD6C00398867 /* sdkTests.swift */; };
-		B928BA9E1EB3D33500398867 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928BA9D1EB3D33500398867 /* Nimble.framework */; };
-		B928BAA01EB3D33D00398867 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928BA9F1EB3D33D00398867 /* Quick.framework */; };
-		B928BAB11EB3D64800398867 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA11EB3D64800398867 /* AlamofireImplementations.swift */; };
-		B928BAB21EB3D64800398867 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA21EB3D64800398867 /* APIHelper.swift */; };
-		B928BAB31EB3D64800398867 /* PaymentsTokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA41EB3D64800398867 /* PaymentsTokenAPI.swift */; };
-		B928BAB41EB3D64800398867 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA51EB3D64800398867 /* APIs.swift */; };
-		B928BAB51EB3D64800398867 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA61EB3D64800398867 /* Extensions.swift */; };
-		B928BAB61EB3D64800398867 /* CardHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA81EB3D64800398867 /* CardHolder.swift */; };
-		B928BAB71EB3D64800398867 /* CardHolderIdentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */; };
-		B928BAB81EB3D64800398867 /* FraudDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAA1EB3D64800398867 /* FraudDetection.swift */; };
-		B928BAB91EB3D64800398867 /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAB1EB3D64800398867 /* ModelError.swift */; };
-		B928BABA1EB3D64800398867 /* PaymentTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */; };
-		B928BABB1EB3D64800398867 /* PaymentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAD1EB3D64800398867 /* PaymentToken.swift */; };
-		B928BABC1EB3D64800398867 /* PaymentCardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAE1EB3D64800398867 /* PaymentCardToken.swift */; };
-		B928BABD1EB3D64800398867 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAAF1EB3D64800398867 /* ValidationError.swift */; };
-		B928BABE1EB3D64800398867 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BAB01EB3D64800398867 /* Models.swift */; };
+		1037AB74E5BB9864B2EA47E9 /* Pods_sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6579953D832D11CAFCF97BF7 /* Pods_sdk_ios_v2.framework */; };
+		6408B4825C46B4E0C3409759 /* Pods_sdk_ios_v2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9113A655DFF19FB4088E24C5 /* Pods_sdk_ios_v2Tests.framework */; };
+		B917D56B1F171E5F009BD4D0 /* TrustDefenderMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */; };
+		B917D56E1F178A1B009BD4D0 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D56D1F178A1B009BD4D0 /* libz.1.dylib */; };
+		B992F9281F170D8100B71C6A /* sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B992F91E1F170D8100B71C6A /* sdk_ios_v2.framework */; };
+		B992F92F1F170D8100B71C6A /* sdk_ios_v2.h in Headers */ = {isa = PBXBuildFile; fileRef = B992F9211F170D8100B71C6A /* sdk_ios_v2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B992F93C1F170F9900B71C6A /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F93B1F170F9900B71C6A /* APIs.swift */; };
+		B992F93E1F170FA800B71C6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F93D1F170FA800B71C6A /* Extensions.swift */; };
+		B992F9401F170FB100B71C6A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F93F1F170FB100B71C6A /* Models.swift */; };
+		B992F9431F170FBB00B71C6A /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9411F170FBB00B71C6A /* AlamofireImplementations.swift */; };
+		B992F9441F170FBB00B71C6A /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9421F170FBB00B71C6A /* APIHelper.swift */; };
+		B992F94F1F170FD500B71C6A /* CardHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9461F170FD500B71C6A /* CardHolder.swift */; };
+		B992F9501F170FD500B71C6A /* CardHolderIdentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9471F170FD500B71C6A /* CardHolderIdentification.swift */; };
+		B992F9511F170FD500B71C6A /* FraudDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9481F170FD500B71C6A /* FraudDetection.swift */; };
+		B992F9521F170FD500B71C6A /* FraudDetectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9491F170FD500B71C6A /* FraudDetectionConfig.swift */; };
+		B992F9531F170FD500B71C6A /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F94A1F170FD500B71C6A /* ModelError.swift */; };
+		B992F9541F170FD500B71C6A /* PaymentCardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F94B1F170FD500B71C6A /* PaymentCardToken.swift */; };
+		B992F9551F170FD500B71C6A /* PaymentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F94C1F170FD500B71C6A /* PaymentToken.swift */; };
+		B992F9561F170FD500B71C6A /* PaymentTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F94D1F170FD500B71C6A /* PaymentTokenResponse.swift */; };
+		B992F9571F170FD500B71C6A /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F94E1F170FD500B71C6A /* ValidationError.swift */; };
+		B992F95B1F170FF100B71C6A /* FraudDetectionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9591F170FF100B71C6A /* FraudDetectionAPI.swift */; };
+		B992F95C1F170FF100B71C6A /* PaymentsTokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F95A1F170FF100B71C6A /* PaymentsTokenAPI.swift */; };
+		B992F95F1F17138B00B71C6A /* sdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F95E1F17138B00B71C6A /* sdkTests.swift */; };
+		B992F9611F1716E300B71C6A /* CyberSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9601F1716E300B71C6A /* CyberSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B928BA061EB3C6EB00398867 /* PBXContainerItemProxy */ = {
+		B992F9291F170D8100B71C6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B928B9F21EB3C6EB00398867 /* Project object */;
+			containerPortal = B992F9151F170D8100B71C6A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B928B9FA1EB3C6EB00398867;
+			remoteGlobalIDString = B992F91D1F170D8100B71C6A;
 			remoteInfo = sdk_ios_v2;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B92841551EBA0A66005DB4AF /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TrustDefenderMobile.framework; path = "../../../Downloads/TrustDefender Mobile iOS v3.1-77 2/TrustDefenderMobile.framework"; sourceTree = "<group>"; };
-		B928417F1EBA0CDC005DB4AF /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
-		B92841821EBA0E77005DB4AF /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefenderMobile.framework; sourceTree = "<group>"; };
-		B92841841EBA0E9C005DB4AF /* CyberSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyberSource.swift; sourceTree = "<group>"; };
-		B92841881EBA1384005DB4AF /* FraudDetectionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetectionAPI.swift; sourceTree = "<group>"; };
-		B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetectionConfig.swift; sourceTree = "<group>"; };
-		B928B9FB1EB3C6EB00398867 /* sdk_ios_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sdk_ios_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B928B9FE1EB3C6EB00398867 /* sdk_ios_v2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sdk_ios_v2.h; sourceTree = "<group>"; };
-		B928B9FF1EB3C6EB00398867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B928BA041EB3C6EB00398867 /* sdk_ios_v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sdk_ios_v2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B928BA0B1EB3C6EB00398867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B928BA6E1EB3CA8500398867 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		B928BA701EB3CA9200398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Checkouts/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
-		B928BA721EB3CA9900398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		B928BA741EB3CAEC00398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Checkouts/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
-		B928BA761EB3CAF300398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		B928BA781EB3CBA300398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
-		B928BA7A1EB3CC0A00398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Checkouts/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
-		B928BA841EB3CD6C00398867 /* sdkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sdkTests.swift; sourceTree = "<group>"; };
-		B928BA861EB3CEFF00398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
-		B928BA881EB3CF1E00398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Quick/Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		B928BA8A1EB3CFCE00398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-appletvos/Quick.framework"; sourceTree = "<group>"; };
-		B928BA8C1EB3CFD200398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
-		B928BA8E1EB3CFD500398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Checkouts/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
-		B928BA901EB3CFDD00398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Quick/Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		B928BA921EB3CFE000398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Checkouts/Quick/Externals/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
-		B928BA941EB3CFE300398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Quick/Externals/Nimble/build/Debug-appletvos/Nimble.framework"; sourceTree = "<group>"; };
-		B928BA961EB3D0B000398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../../Library/Developer/Xcode/DerivedData/sdk_ios_v2-eivwkflufzcxlphicmjfahhqanmc/Build/Products/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		B928BA981EB3D0B900398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../../Library/Developer/Xcode/DerivedData/sdk_ios_v2-eivwkflufzcxlphicmjfahhqanmc/Build/Products/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
-		B928BA9D1EB3D33500398867 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../../Library/Developer/Xcode/DerivedData/sdk_ios_v2-eivwkflufzcxlphicmjfahhqanmc/Build/Products/Debug-iphonesimulator/Nimble.framework"; sourceTree = "<group>"; };
-		B928BA9F1EB3D33D00398867 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../../Library/Developer/Xcode/DerivedData/sdk_ios_v2-eivwkflufzcxlphicmjfahhqanmc/Build/Products/Debug-iphonesimulator/Quick.framework"; sourceTree = "<group>"; };
-		B928BAA11EB3D64800398867 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
-		B928BAA21EB3D64800398867 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
-		B928BAA41EB3D64800398867 /* PaymentsTokenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsTokenAPI.swift; sourceTree = "<group>"; };
-		B928BAA51EB3D64800398867 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		B928BAA61EB3D64800398867 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		B928BAA81EB3D64800398867 /* CardHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolder.swift; sourceTree = "<group>"; };
-		B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolderIdentification.swift; sourceTree = "<group>"; };
-		B928BAAA1EB3D64800398867 /* FraudDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetection.swift; sourceTree = "<group>"; };
-		B928BAAB1EB3D64800398867 /* ModelError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
-		B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenResponse.swift; sourceTree = "<group>"; };
-		B928BAAD1EB3D64800398867 /* PaymentToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentToken.swift; sourceTree = "<group>"; };
-		B928BAAE1EB3D64800398867 /* PaymentCardToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardToken.swift; sourceTree = "<group>"; };
-		B928BAAF1EB3D64800398867 /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
-		B928BAB01EB3D64800398867 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		1643DC8C85CFFCC1BA7DFFF9 /* Pods-sdk_ios_v2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2Tests/Pods-sdk_ios_v2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2592EAEA7EEA0B585D090ED5 /* Pods-sdk_ios_v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2/Pods-sdk_ios_v2.debug.xcconfig"; sourceTree = "<group>"; };
+		6579953D832D11CAFCF97BF7 /* Pods_sdk_ios_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdk_ios_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9113A655DFF19FB4088E24C5 /* Pods_sdk_ios_v2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdk_ios_v2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9AB0FD55BF766C260AB889D /* Pods-sdk_ios_v2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2Tests/Pods-sdk_ios_v2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefenderMobile.framework; sourceTree = "<group>"; };
+		B917D56D1F178A1B009BD4D0 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		B992F91E1F170D8100B71C6A /* sdk_ios_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sdk_ios_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B992F9211F170D8100B71C6A /* sdk_ios_v2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sdk_ios_v2.h; sourceTree = "<group>"; };
+		B992F9221F170D8100B71C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B992F9271F170D8100B71C6A /* sdk_ios_v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sdk_ios_v2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B992F92E1F170D8100B71C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B992F93B1F170F9900B71C6A /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		B992F93D1F170FA800B71C6A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B992F93F1F170FB100B71C6A /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B992F9411F170FBB00B71C6A /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
+		B992F9421F170FBB00B71C6A /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		B992F9461F170FD500B71C6A /* CardHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolder.swift; sourceTree = "<group>"; };
+		B992F9471F170FD500B71C6A /* CardHolderIdentification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolderIdentification.swift; sourceTree = "<group>"; };
+		B992F9481F170FD500B71C6A /* FraudDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetection.swift; sourceTree = "<group>"; };
+		B992F9491F170FD500B71C6A /* FraudDetectionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetectionConfig.swift; sourceTree = "<group>"; };
+		B992F94A1F170FD500B71C6A /* ModelError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
+		B992F94B1F170FD500B71C6A /* PaymentCardToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardToken.swift; sourceTree = "<group>"; };
+		B992F94C1F170FD500B71C6A /* PaymentToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentToken.swift; sourceTree = "<group>"; };
+		B992F94D1F170FD500B71C6A /* PaymentTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenResponse.swift; sourceTree = "<group>"; };
+		B992F94E1F170FD500B71C6A /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		B992F9591F170FF100B71C6A /* FraudDetectionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetectionAPI.swift; sourceTree = "<group>"; };
+		B992F95A1F170FF100B71C6A /* PaymentsTokenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsTokenAPI.swift; sourceTree = "<group>"; };
+		B992F95E1F17138B00B71C6A /* sdkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sdkTests.swift; sourceTree = "<group>"; };
+		B992F9601F1716E300B71C6A /* CyberSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyberSource.swift; sourceTree = "<group>"; };
+		C1797C188C6AAC0DEA3B7AF6 /* Pods-sdk_ios_v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2/Pods-sdk_ios_v2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B928B9F71EB3C6EB00398867 /* Frameworks */ = {
+		B992F91A1F170D8100B71C6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92841861EBA0EDD005DB4AF /* libz.1.dylib in Frameworks */,
-				B92841831EBA0E77005DB4AF /* TrustDefenderMobile.framework in Frameworks */,
-				B928BA6F1EB3CA8500398867 /* Alamofire.framework in Frameworks */,
+				B917D56E1F178A1B009BD4D0 /* libz.1.dylib in Frameworks */,
+				B917D56B1F171E5F009BD4D0 /* TrustDefenderMobile.framework in Frameworks */,
+				1037AB74E5BB9864B2EA47E9 /* Pods_sdk_ios_v2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B928BA011EB3C6EB00398867 /* Frameworks */ = {
+		B992F9241F170D8100B71C6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B928BAA01EB3D33D00398867 /* Quick.framework in Frameworks */,
-				B928BA9E1EB3D33500398867 /* Nimble.framework in Frameworks */,
-				B928BA051EB3C6EB00398867 /* sdk_ios_v2.framework in Frameworks */,
+				B992F9281F170D8100B71C6A /* sdk_ios_v2.framework in Frameworks */,
+				6408B4825C46B4E0C3409759 /* Pods_sdk_ios_v2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B928B9F11EB3C6EB00398867 = {
+		67D9109FFB26F51D91E7110A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B92841821EBA0E77005DB4AF /* TrustDefenderMobile.framework */,
-				B928B9FD1EB3C6EB00398867 /* sdk_ios_v2 */,
-				B928BA081EB3C6EB00398867 /* sdk_ios_v2Tests */,
-				B928B9FC1EB3C6EB00398867 /* Products */,
-				B928BA6D1EB3CA8500398867 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		B928B9FC1EB3C6EB00398867 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B928B9FB1EB3C6EB00398867 /* sdk_ios_v2.framework */,
-				B928BA041EB3C6EB00398867 /* sdk_ios_v2Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B928B9FD1EB3C6EB00398867 /* sdk_ios_v2 */ = {
-			isa = PBXGroup;
-			children = (
-				B928BAA11EB3D64800398867 /* AlamofireImplementations.swift */,
-				B928BAA21EB3D64800398867 /* APIHelper.swift */,
-				B928BAA31EB3D64800398867 /* APIs */,
-				B928BAA51EB3D64800398867 /* APIs.swift */,
-				B928BAA61EB3D64800398867 /* Extensions.swift */,
-				B928BAA71EB3D64800398867 /* Models */,
-				B928BAB01EB3D64800398867 /* Models.swift */,
-				B928B9FE1EB3C6EB00398867 /* sdk_ios_v2.h */,
-				B928B9FF1EB3C6EB00398867 /* Info.plist */,
-				B92841841EBA0E9C005DB4AF /* CyberSource.swift */,
-			);
-			path = sdk_ios_v2;
-			sourceTree = "<group>";
-		};
-		B928BA081EB3C6EB00398867 /* sdk_ios_v2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				B928BA0B1EB3C6EB00398867 /* Info.plist */,
-				B928BA841EB3CD6C00398867 /* sdkTests.swift */,
-			);
-			path = sdk_ios_v2Tests;
-			sourceTree = "<group>";
-		};
-		B928BA6D1EB3CA8500398867 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B928417F1EBA0CDC005DB4AF /* libz.1.dylib */,
-				B92841551EBA0A66005DB4AF /* TrustDefenderMobile.framework */,
-				B928BA9F1EB3D33D00398867 /* Quick.framework */,
-				B928BA9D1EB3D33500398867 /* Nimble.framework */,
-				B928BA981EB3D0B900398867 /* Quick.framework */,
-				B928BA961EB3D0B000398867 /* Nimble.framework */,
-				B928BA941EB3CFE300398867 /* Nimble.framework */,
-				B928BA921EB3CFE000398867 /* Nimble.framework */,
-				B928BA901EB3CFDD00398867 /* Nimble.framework */,
-				B928BA8E1EB3CFD500398867 /* Quick.framework */,
-				B928BA8C1EB3CFD200398867 /* Quick.framework */,
-				B928BA8A1EB3CFCE00398867 /* Quick.framework */,
-				B928BA881EB3CF1E00398867 /* Nimble.framework */,
-				B928BA861EB3CEFF00398867 /* Quick.framework */,
-				B928BA7A1EB3CC0A00398867 /* Quick.framework */,
-				B928BA781EB3CBA300398867 /* Quick.framework */,
-				B928BA761EB3CAF300398867 /* Nimble.framework */,
-				B928BA741EB3CAEC00398867 /* Quick.framework */,
-				B928BA721EB3CA9900398867 /* Nimble.framework */,
-				B928BA701EB3CA9200398867 /* Quick.framework */,
-				B928BA6E1EB3CA8500398867 /* Alamofire.framework */,
+				B917D56D1F178A1B009BD4D0 /* libz.1.dylib */,
+				B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */,
+				6579953D832D11CAFCF97BF7 /* Pods_sdk_ios_v2.framework */,
+				9113A655DFF19FB4088E24C5 /* Pods_sdk_ios_v2Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B928BAA31EB3D64800398867 /* APIs */ = {
+		7B4B5066661D2C71F0973857 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B928BAA41EB3D64800398867 /* PaymentsTokenAPI.swift */,
-				B92841881EBA1384005DB4AF /* FraudDetectionAPI.swift */,
+				2592EAEA7EEA0B585D090ED5 /* Pods-sdk_ios_v2.debug.xcconfig */,
+				C1797C188C6AAC0DEA3B7AF6 /* Pods-sdk_ios_v2.release.xcconfig */,
+				A9AB0FD55BF766C260AB889D /* Pods-sdk_ios_v2Tests.debug.xcconfig */,
+				1643DC8C85CFFCC1BA7DFFF9 /* Pods-sdk_ios_v2Tests.release.xcconfig */,
 			);
-			path = APIs;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		B928BAA71EB3D64800398867 /* Models */ = {
+		B992F9141F170D8100B71C6A = {
 			isa = PBXGroup;
 			children = (
-				B928BAA81EB3D64800398867 /* CardHolder.swift */,
-				B928BAA91EB3D64800398867 /* CardHolderIdentification.swift */,
-				B928BAAA1EB3D64800398867 /* FraudDetection.swift */,
-				B928BAAB1EB3D64800398867 /* ModelError.swift */,
-				B928BAAC1EB3D64800398867 /* PaymentTokenResponse.swift */,
-				B928BAAD1EB3D64800398867 /* PaymentToken.swift */,
-				B928BAAE1EB3D64800398867 /* PaymentCardToken.swift */,
-				B928BAAF1EB3D64800398867 /* ValidationError.swift */,
-				B928418A1EBA2877005DB4AF /* FraudDetectionConfig.swift */,
+				B992F9201F170D8100B71C6A /* sdk_ios_v2 */,
+				B992F92B1F170D8100B71C6A /* sdk_ios_v2Tests */,
+				B992F91F1F170D8100B71C6A /* Products */,
+				7B4B5066661D2C71F0973857 /* Pods */,
+				67D9109FFB26F51D91E7110A /* Frameworks */,
 			);
-			path = Models;
+			sourceTree = "<group>";
+		};
+		B992F91F1F170D8100B71C6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B992F91E1F170D8100B71C6A /* sdk_ios_v2.framework */,
+				B992F9271F170D8100B71C6A /* sdk_ios_v2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B992F9201F170D8100B71C6A /* sdk_ios_v2 */ = {
+			isa = PBXGroup;
+			children = (
+				B992F9381F170ED000B71C6A /* Classes */,
+				B992F9211F170D8100B71C6A /* sdk_ios_v2.h */,
+				B992F9221F170D8100B71C6A /* Info.plist */,
+			);
+			path = sdk_ios_v2;
+			sourceTree = "<group>";
+		};
+		B992F92B1F170D8100B71C6A /* sdk_ios_v2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B992F95E1F17138B00B71C6A /* sdkTests.swift */,
+				B992F92E1F170D8100B71C6A /* Info.plist */,
+			);
+			path = sdk_ios_v2Tests;
+			sourceTree = "<group>";
+		};
+		B992F9381F170ED000B71C6A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B992F9601F1716E300B71C6A /* CyberSource.swift */,
+				B992F9581F170FE300B71C6A /* APIs */,
+				B992F9451F170FC900B71C6A /* Models */,
+				B992F93D1F170FA800B71C6A /* Extensions.swift */,
+				B992F93F1F170FB100B71C6A /* Models.swift */,
+				B992F9411F170FBB00B71C6A /* AlamofireImplementations.swift */,
+				B992F9421F170FBB00B71C6A /* APIHelper.swift */,
+				B992F93B1F170F9900B71C6A /* APIs.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B992F9451F170FC900B71C6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B992F9461F170FD500B71C6A /* CardHolder.swift */,
+				B992F9471F170FD500B71C6A /* CardHolderIdentification.swift */,
+				B992F9481F170FD500B71C6A /* FraudDetection.swift */,
+				B992F9491F170FD500B71C6A /* FraudDetectionConfig.swift */,
+				B992F94A1F170FD500B71C6A /* ModelError.swift */,
+				B992F94B1F170FD500B71C6A /* PaymentCardToken.swift */,
+				B992F94C1F170FD500B71C6A /* PaymentToken.swift */,
+				B992F94D1F170FD500B71C6A /* PaymentTokenResponse.swift */,
+				B992F94E1F170FD500B71C6A /* ValidationError.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B992F9581F170FE300B71C6A /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				B992F9591F170FF100B71C6A /* FraudDetectionAPI.swift */,
+				B992F95A1F170FF100B71C6A /* PaymentsTokenAPI.swift */,
+			);
+			name = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B928B9F81EB3C6EB00398867 /* Headers */ = {
+		B992F91B1F170D8100B71C6A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B928BA0C1EB3C6EB00398867 /* sdk_ios_v2.h in Headers */,
+				B992F92F1F170D8100B71C6A /* sdk_ios_v2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B928B9FA1EB3C6EB00398867 /* sdk_ios_v2 */ = {
+		B992F91D1F170D8100B71C6A /* sdk_ios_v2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B928BA0F1EB3C6EB00398867 /* Build configuration list for PBXNativeTarget "sdk_ios_v2" */;
+			buildConfigurationList = B992F9321F170D8100B71C6A /* Build configuration list for PBXNativeTarget "sdk_ios_v2" */;
 			buildPhases = (
-				B928B9F61EB3C6EB00398867 /* Sources */,
-				B928B9F71EB3C6EB00398867 /* Frameworks */,
-				B928B9F81EB3C6EB00398867 /* Headers */,
-				B928B9F91EB3C6EB00398867 /* Resources */,
+				09CA9158E094E9E705F82C33 /* [CP] Check Pods Manifest.lock */,
+				B992F9191F170D8100B71C6A /* Sources */,
+				B992F91A1F170D8100B71C6A /* Frameworks */,
+				B992F91B1F170D8100B71C6A /* Headers */,
+				B992F91C1F170D8100B71C6A /* Resources */,
+				ABFD70264338379EB00897AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,78 +232,81 @@
 			);
 			name = sdk_ios_v2;
 			productName = sdk_ios_v2;
-			productReference = B928B9FB1EB3C6EB00398867 /* sdk_ios_v2.framework */;
+			productReference = B992F91E1F170D8100B71C6A /* sdk_ios_v2.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B928BA031EB3C6EB00398867 /* sdk_ios_v2Tests */ = {
+		B992F9261F170D8100B71C6A /* sdk_ios_v2Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B928BA121EB3C6EB00398867 /* Build configuration list for PBXNativeTarget "sdk_ios_v2Tests" */;
+			buildConfigurationList = B992F9351F170D8100B71C6A /* Build configuration list for PBXNativeTarget "sdk_ios_v2Tests" */;
 			buildPhases = (
-				B928BA001EB3C6EB00398867 /* Sources */,
-				B928BA011EB3C6EB00398867 /* Frameworks */,
-				B928BA021EB3C6EB00398867 /* Resources */,
+				22BE80266487C927B740E529 /* [CP] Check Pods Manifest.lock */,
+				B992F9231F170D8100B71C6A /* Sources */,
+				B992F9241F170D8100B71C6A /* Frameworks */,
+				B992F9251F170D8100B71C6A /* Resources */,
+				C21D351904597379667081AE /* [CP] Embed Pods Frameworks */,
+				21D1EF91C6B2479FA027D19F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B928BA071EB3C6EB00398867 /* PBXTargetDependency */,
+				B992F92A1F170D8100B71C6A /* PBXTargetDependency */,
 			);
 			name = sdk_ios_v2Tests;
 			productName = sdk_ios_v2Tests;
-			productReference = B928BA041EB3C6EB00398867 /* sdk_ios_v2Tests.xctest */;
+			productReference = B992F9271F170D8100B71C6A /* sdk_ios_v2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B928B9F21EB3C6EB00398867 /* Project object */ = {
+		B992F9151F170D8100B71C6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Prisma Medios de Pago";
 				TargetAttributes = {
-					B928B9FA1EB3C6EB00398867 = {
-						CreatedOnToolsVersion = 8.3.1;
+					B992F91D1F170D8100B71C6A = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = Z34G6W9973;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
-					B928BA031EB3C6EB00398867 = {
-						CreatedOnToolsVersion = 8.3.1;
+					B992F9261F170D8100B71C6A = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = Z34G6W9973;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = B928B9F51EB3C6EB00398867 /* Build configuration list for PBXProject "sdk_ios_v2" */;
+			buildConfigurationList = B992F9181F170D8100B71C6A /* Build configuration list for PBXProject "sdk_ios_v2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = B928B9F11EB3C6EB00398867;
-			productRefGroup = B928B9FC1EB3C6EB00398867 /* Products */;
+			mainGroup = B992F9141F170D8100B71C6A;
+			productRefGroup = B992F91F1F170D8100B71C6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B928B9FA1EB3C6EB00398867 /* sdk_ios_v2 */,
-				B928BA031EB3C6EB00398867 /* sdk_ios_v2Tests */,
+				B992F91D1F170D8100B71C6A /* sdk_ios_v2 */,
+				B992F9261F170D8100B71C6A /* sdk_ios_v2Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B928B9F91EB3C6EB00398867 /* Resources */ = {
+		B992F91C1F170D8100B71C6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B928BA021EB3C6EB00398867 /* Resources */ = {
+		B992F9251F170D8100B71C6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,51 +315,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09CA9158E094E9E705F82C33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		21D1EF91C6B2479FA027D19F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sdk_ios_v2Tests/Pods-sdk_ios_v2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22BE80266487C927B740E529 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ABFD70264338379EB00897AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sdk_ios_v2/Pods-sdk_ios_v2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C21D351904597379667081AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sdk_ios_v2Tests/Pods-sdk_ios_v2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		B928B9F61EB3C6EB00398867 /* Sources */ = {
+		B992F9191F170D8100B71C6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B928BAB71EB3D64800398867 /* CardHolderIdentification.swift in Sources */,
-				B928BAB51EB3D64800398867 /* Extensions.swift in Sources */,
-				B928BAB31EB3D64800398867 /* PaymentsTokenAPI.swift in Sources */,
-				B928BABD1EB3D64800398867 /* ValidationError.swift in Sources */,
-				B928BAB21EB3D64800398867 /* APIHelper.swift in Sources */,
-				B92841851EBA0E9C005DB4AF /* CyberSource.swift in Sources */,
-				B928BABC1EB3D64800398867 /* PaymentCardToken.swift in Sources */,
-				B928BAB81EB3D64800398867 /* FraudDetection.swift in Sources */,
-				B928BAB91EB3D64800398867 /* ModelError.swift in Sources */,
-				B928BABB1EB3D64800398867 /* PaymentToken.swift in Sources */,
-				B928BABA1EB3D64800398867 /* PaymentTokenResponse.swift in Sources */,
-				B928BAB61EB3D64800398867 /* CardHolder.swift in Sources */,
-				B928BAB41EB3D64800398867 /* APIs.swift in Sources */,
-				B928418B1EBA2877005DB4AF /* FraudDetectionConfig.swift in Sources */,
-				B92841891EBA1384005DB4AF /* FraudDetectionAPI.swift in Sources */,
-				B928BAB11EB3D64800398867 /* AlamofireImplementations.swift in Sources */,
-				B928BABE1EB3D64800398867 /* Models.swift in Sources */,
+				B992F9511F170FD500B71C6A /* FraudDetection.swift in Sources */,
+				B992F9521F170FD500B71C6A /* FraudDetectionConfig.swift in Sources */,
+				B992F9531F170FD500B71C6A /* ModelError.swift in Sources */,
+				B992F9501F170FD500B71C6A /* CardHolderIdentification.swift in Sources */,
+				B992F9551F170FD500B71C6A /* PaymentToken.swift in Sources */,
+				B992F9401F170FB100B71C6A /* Models.swift in Sources */,
+				B992F95B1F170FF100B71C6A /* FraudDetectionAPI.swift in Sources */,
+				B992F9561F170FD500B71C6A /* PaymentTokenResponse.swift in Sources */,
+				B992F93C1F170F9900B71C6A /* APIs.swift in Sources */,
+				B992F9431F170FBB00B71C6A /* AlamofireImplementations.swift in Sources */,
+				B992F9571F170FD500B71C6A /* ValidationError.swift in Sources */,
+				B992F9611F1716E300B71C6A /* CyberSource.swift in Sources */,
+				B992F94F1F170FD500B71C6A /* CardHolder.swift in Sources */,
+				B992F9541F170FD500B71C6A /* PaymentCardToken.swift in Sources */,
+				B992F95C1F170FF100B71C6A /* PaymentsTokenAPI.swift in Sources */,
+				B992F9441F170FBB00B71C6A /* APIHelper.swift in Sources */,
+				B992F93E1F170FA800B71C6A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B928BA001EB3C6EB00398867 /* Sources */ = {
+		B992F9231F170D8100B71C6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B928BA851EB3CD6C00398867 /* sdkTests.swift in Sources */,
+				B992F95F1F17138B00B71C6A /* sdkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B928BA071EB3C6EB00398867 /* PBXTargetDependency */ = {
+		B992F92A1F170D8100B71C6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B928B9FA1EB3C6EB00398867 /* sdk_ios_v2 */;
-			targetProxy = B928BA061EB3C6EB00398867 /* PBXContainerItemProxy */;
+			target = B992F91D1F170D8100B71C6A /* sdk_ios_v2 */;
+			targetProxy = B992F9291F170D8100B71C6A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		B928BA0D1EB3C6EB00398867 /* Debug */ = {
+		B992F9301F170D8100B71C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -412,7 +481,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -422,7 +492,7 @@
 			};
 			name = Debug;
 		};
-		B928BA0E1EB3C6EB00398867 /* Release */ = {
+		B992F9311F170D8100B71C6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -460,6 +530,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,8 +541,9 @@
 			};
 			name = Release;
 		};
-		B928BA101EB3C6EB00398867 /* Debug */ = {
+		B992F9331F170D8100B71C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2592EAEA7EEA0B585D090ED5 /* Pods-sdk_ios_v2.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -481,15 +554,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = sdk_ios_v2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prismamp.sdk-ios-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -498,8 +567,9 @@
 			};
 			name = Debug;
 		};
-		B928BA111EB3C6EB00398867 /* Release */ = {
+		B992F9341F170D8100B71C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1797C188C6AAC0DEA3B7AF6 /* Pods-sdk_ios_v2.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -510,15 +580,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = sdk_ios_v2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prismamp.sdk-ios-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -526,51 +592,35 @@
 			};
 			name = Release;
 		};
-		B928BA131EB3C6EB00398867 /* Debug */ = {
+		B992F9361F170D8100B71C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AB0FD55BF766C260AB889D /* Pods-sdk_ios_v2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Z34G6W9973;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/Externals/Nimble/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug-appletvos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/Externals/Nimble/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/Externals/Nimble/build/Debug-appletvos",
-				);
 				INFOPLIST_FILE = sdk_ios_v2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prismamp.sdk-ios-v2Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		B928BA141EB3C6EB00398867 /* Release */ = {
+		B992F9371F170D8100B71C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1643DC8C85CFFCC1BA7DFFF9 /* Pods-sdk_ios_v2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Z34G6W9973;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/Externals/Nimble/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug-appletvos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/Externals/Nimble/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/Externals/Nimble/build/Debug-appletvos",
-				);
 				INFOPLIST_FILE = sdk_ios_v2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prismamp.sdk-ios-v2Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -578,34 +628,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B928B9F51EB3C6EB00398867 /* Build configuration list for PBXProject "sdk_ios_v2" */ = {
+		B992F9181F170D8100B71C6A /* Build configuration list for PBXProject "sdk_ios_v2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B928BA0D1EB3C6EB00398867 /* Debug */,
-				B928BA0E1EB3C6EB00398867 /* Release */,
+				B992F9301F170D8100B71C6A /* Debug */,
+				B992F9311F170D8100B71C6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B928BA0F1EB3C6EB00398867 /* Build configuration list for PBXNativeTarget "sdk_ios_v2" */ = {
+		B992F9321F170D8100B71C6A /* Build configuration list for PBXNativeTarget "sdk_ios_v2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B928BA101EB3C6EB00398867 /* Debug */,
-				B928BA111EB3C6EB00398867 /* Release */,
+				B992F9331F170D8100B71C6A /* Debug */,
+				B992F9341F170D8100B71C6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B928BA121EB3C6EB00398867 /* Build configuration list for PBXNativeTarget "sdk_ios_v2Tests" */ = {
+		B992F9351F170D8100B71C6A /* Build configuration list for PBXNativeTarget "sdk_ios_v2Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B928BA131EB3C6EB00398867 /* Debug */,
-				B928BA141EB3C6EB00398867 /* Release */,
+				B992F9361F170D8100B71C6A /* Debug */,
+				B992F9371F170D8100B71C6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B928B9F21EB3C6EB00398867 /* Project object */;
+	rootObject = B992F9151F170D8100B71C6A /* Project object */;
 }

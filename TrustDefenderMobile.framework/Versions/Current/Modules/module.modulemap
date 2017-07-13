@@ -1,0 +1,6 @@
+framework module TrustDefenderMobile {
+    umbrella header "TrustDefenderMobile.h"
+    
+    export *
+    module * { export * }
+}

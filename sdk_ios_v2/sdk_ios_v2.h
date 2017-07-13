@@ -2,11 +2,13 @@
 //  sdk_ios_v2.h
 //  sdk_ios_v2
 //
-//  Created by Maxi on 4/28/17.
+//  Created by Maxi on 7/12/17.
 //  Copyright © 2017 Prisma Medios de Pago. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+
+
 
 //! Project version number for sdk_ios_v2.
 FOUNDATION_EXPORT double sdk_ios_v2VersionNumber;
