@@ -1,24 +1,28 @@
 {
   "name": "sdk_ios_v2",
   "version": "0.1.0",
-  "summary": "A short description of sdk_ios_v2.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Maxi/sdk_ios_v2",
+  "summary": "SDK Iios spec for make payments to Decidir v2.",
+  "description": "Decidir 2.0 iOS SDK\n* Also supports cybersource trust handler\n* Includes tests to show how to use SDK\n* Usage of alamofire for http requests",
+  "homepage": "https://github.com/decidir/SDK-IOS.v2",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Maxi": "maxi.britez@redb.ee"
+    "Decidir": "developers@decidir.com"
   },
   "source": {
-    "git": "https://github.com/Maxi/sdk_ios_v2.git",
+    "git": "https://github.com/decidir/SDK-IOS.v2.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "sdk_ios_v2/Classes/**/*",
+  "libraries": "z",
+  "ios": {
+    "vendored_frameworks": "TrustDefenderMobile.framework"
+  },
+  "source_files": "sdk_ios_v2/**/*",
   "dependencies": {
     "Alamofire": [
       "~> 4.0"

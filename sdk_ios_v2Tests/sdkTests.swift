@@ -19,7 +19,7 @@ class SDKTests: QuickSpec {
                 
                 let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
                 
-                let pti = PaymentTokenInfo()
+                let pti = PaymentToken()
                 pti.cardNumber = "44213211231"
                 pti.cardExpirationMonth = "12"
                 pti.cardExpirationYear = "20"
@@ -32,7 +32,7 @@ class SDKTests: QuickSpec {
                 
                 pti.cardHolderIdentification = holder
                 
-                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
                     
                     expect(error).to(beNil())
                     
@@ -55,7 +55,7 @@ class SDKTests: QuickSpec {
                 
                 let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
                 
-                let pti = PaymentTokenInfo()
+                let pti = PaymentToken()
                 pti.cardNumber = "44213211231"
                 pti.cardExpirationMonth = "12"
                 pti.cardExpirationYear = "20"
@@ -68,7 +68,7 @@ class SDKTests: QuickSpec {
                 
                 pti.cardHolderIdentification = holder
                 
-                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
                     
                     expect(error).to(beNil())
                     
@@ -90,7 +90,7 @@ class SDKTests: QuickSpec {
                 
                 let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741")
                 
-                let pti = PaymentTokenInfo()
+                let pti = PaymentToken()
                 pti.cardNumber = "44213211231"
                 pti.cardExpirationMonth = "12"
                 pti.cardExpirationYear = "20"
@@ -103,7 +103,7 @@ class SDKTests: QuickSpec {
                 
                 pti.cardHolderIdentification = holder
                 
-                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
                     
                     expect(paymentToken).to(beNil())
                     
@@ -130,7 +130,7 @@ class SDKTests: QuickSpec {
                 
                 let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
                 
-                let pti = PaymentTokenInfo()
+                let pti = PaymentToken()
                 pti.cardNumber = "44213211231"
                 pti.cardExpirationMonth = "12"
                 pti.cardExpirationYear = "12"
@@ -143,7 +143,7 @@ class SDKTests: QuickSpec {
                 
                 pti.cardHolderIdentification = holder
                 
-                paymentTokenApi.createPaymentToken(paymentTokenInfo: pti) { (paymentToken, error) in
+                paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
                     
                     expect(paymentToken).to(beNil())
                     
@@ -177,11 +177,11 @@ class SDKTests: QuickSpec {
                 
                 let paymentTokenApi = PaymentsTokenAPI(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
                 
-                let pti = PaymentTokenInfoWithCardToken()
+                let pti = PaymentCardToken()
                 pti.token = "someToken"
                 pti.securityCode = "123"
                 
-                paymentTokenApi.createPaymentTokenWithCardToken(paymentTokenInfoWithCardToken: pti) { (paymentToken, error) in
+                paymentTokenApi.createPaymentCardToken(paymentCardToken: pti) { (paymentToken, error) in
                     
                     expect(paymentToken).to(beNil())
                     

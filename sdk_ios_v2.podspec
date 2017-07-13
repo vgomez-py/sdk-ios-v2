@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'sdk_ios_v2'
-  s.version          = '0.1.0'
-  s.summary          = 'SDK Iios spec for make payments to Decidir v2.'
+s.name             = 'sdk_ios_v2'
+s.version          = '0.1.0'
+s.summary          = 'SDK Iios spec for make payments to Decidir v2.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,21 +17,21 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+s.description      = <<-DESC
 Decidir 2.0 iOS SDK
 * Also supports cybersource trust handler
 * Includes tests to show how to use SDK
 * Usage of alamofire for http requests
-                       DESC
+DESC
 
-  s.homepage         = 'https://github.com/decidir/SDK-IOS.v2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Decidir' => 'developers@decidir.com' }
-  s.source           = { :git => 'https://github.com/decidir/SDK-IOS.v2.git', :tag => s.version.to_s }
+s.homepage         = 'https://github.com/decidir/SDK-IOS.v2'
+s.license          = { :type => 'MIT', :file => 'LICENSE' }
+s.author           = { 'Decidir' => 'developers@decidir.com' }
+s.source           = { :git => 'https://github.com/decidir/SDK-IOS.v2.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'sdk_ios_v2/**/*'
-
-  s.dependency 'Alamofire', '~> 4.0'
+s.ios.deployment_target = '8.0'
+s.library = 'z'
+s.ios.vendored_frameworks = 'TrustDefenderMobile.framework'
+s.source_files = 'sdk_ios_v2/**/*'
+s.dependency 'Alamofire', '~> 4.0'
 end
