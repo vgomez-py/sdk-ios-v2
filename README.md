@@ -6,18 +6,20 @@ Modulo para conexión con gateway de pago DECIDIR2
 
 + [Introducción](#introduccion)
   + [Alcance](#scope)
+  + [Cierre de lotes](#cierre)
   + [Diagrama de secuencia](#secuencia)
 + [Instalación](#instalacion)
   + [Versiones de IOS soportadas](#versionesdeiosoportadas)
   + [Ambientes](#test)
 + [Uso](#uso)
   + [Inicializar la clase correspondiente al conector](#initconector)
+  + [Device fingerprinter](#device)
   + [Operatoria del Gateway](#operatoria)
     + [Generaci&oacute;n de Token de Pago](#authenticate)
       +  [Con datos de tarjeta](#datostarjeta)
       +  [Con tarjeta tokenizada](#tokentarjeta)
   + [Integración con Cybersource](#cybersource)
-
+  
 <a name="introduccion"></a>
 ## Introducción
 El flujo de una transacción a través de las **sdks** consta de dos pasos, la **generaci&oacute;n de un token de pago** por parte del cliente y el **procesamiento de pago** por parte del comercio. Existen sdks espec&iacute;ficas para realizar estas funciones en distintos lenguajes que se detallan a continuaci&oacute;n:
@@ -54,6 +56,24 @@ Para procesar el pago con **Decidir**, el comercio podr&acute; realizarlo a trav
 
 [<sub>Volver a inicio</sub>](#inicio)
 
+<a name="cierre"></a>
+## Cierre de lotes
+El cierre de lote le permite al comercio hacer la presentación ante cada Marca de las operaciones de Compras, Anulaciones y Devoluciones realizadas para que las mismas puedan ser liquidadas por cada medio de pago.+
+
+Los cierres de lotes de cada medio de pago pueden realizarse de 2 maneras:
+Manual: esta modalidad es “on demand”. Para ello, un usuario del comercio debe ingresar a la consola de Decidir y seleccionar el medio de pago a cerrar lote. Opción de menú: Menú --> Cerrar Lote. Para más detalle por favor consultar el Manual de Administración de Decidir.
+Automática: Los procesos se ejecutan diariamente luego de la medianoche, y al finalizar, se envían al comercio cada uno de los archivos del cierre de lote de cada medio de pago habilitado.
+Los resúmenes correspondientes a los cierres de lotes automáticos efectuados pueden ser enviados por:
+- E-MAIL
+- FTP/SFTP
+
+En caso de que el comercio opte por recibir los resúmenes vía e-mail, debe indicarnos a qué dirección o direcciones de correo electrónico desea recibir tales archivos.
+En caso de que el comercio opte por recibir los resúmenes vía FTP o SFTP, debe indicarnos los siguientes datos: URL del servidor, usuario y clave.
+
+LINK
+
+
+[<sub>Volver a inicio</sub>](#inicio)
 <a name="secuencia"></a>
 
 ## Diagrama de secuencia
@@ -158,6 +178,17 @@ var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox
 
 [<sub>Volver a inicio</sub>](#inicio)
 
+<a name="device"></a>
+
+## Device FingerPrint
+El **Device Fingerprint (DF)** es la huella digital del dispositivo que realiza la transacción. 
+Es un dato muy importante que se tiene en cuenta en el proceso de validación
+Para acceder a la documentación: 
+https://decidir.api-docs.io/1.0/prevencion-de-fraude-by-cybersource/cs_device_fingerprint
+
+
+[<sub>Volver a inicio</sub>](#inicio)
+
 <a name="operatoria"></a>
 
 ## Operatoria del Gateway
@@ -177,6 +208,17 @@ El token de pago puede ser generado de 2 formas como se muestra a continuaci&oac
 #### Con datos de tarjeta
 
 Mediante este recurso, se genera un token de pago a partir de los datos de la tarjeta del cliente.
+
+|Campo | Descripcion  | Oblig | Restricciones  |Ejemplo   |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| card_number| numero de tc  | SI  |  Mayor igual a 6 numeros   | "4507990000004905"  |
+| card_expiration_month | mes de vto de tc  | SI  | No debe ser anterior a la fecha (mes/año) del dia actual  | 07  |
+| card_expiration_year  |año de vto de tc   | SI  |  No debe ser anterior a la fecha (mes/año) del dia actual   | 17  |
+| security_code | codigo de seguridad  | NO  | Sin validacion  | 234  |
+| card_holder_name | titular (como figura en la tc)  | SI  | Mayor igual a 1 letra  | Valentin Santiago Gomez  |
+| type  |  tipo de documento | NO  | Sin validacion  | dni/DNI, cuil/CUIL  |
+| number  | nro de documento  | NO  |  Sin validacion | 23968498  |
+| device_unique_identifier  | identificador único del dispositivo  | NO  |  Sin validacion | 12345  |
 
 ```swift
 // ...codigo...
@@ -328,5 +370,5 @@ self.decidir.createPaymentCardToken(paymentCardToken: pct) { (paymentToken, erro
   }
 }
 ```
-
 [<sub>Volver a inicio</sub>](#inicio)
+
