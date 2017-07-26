@@ -13,12 +13,12 @@ Modulo para conexión con gateway de pago DECIDIR2
   + [Ambientes](#test)
 + [Uso](#uso)
   + [Inicializar la clase correspondiente al conector](#initconector)
-  + [Device fingerprinter](#device)
   + [Operatoria del Gateway](#operatoria)
     + [Generaci&oacute;n de Token de Pago](#authenticate)
       +  [Con datos de tarjeta](#datostarjeta)
       +  [Con tarjeta tokenizada](#tokentarjeta)
   + [Integración con Cybersource](#cybersource)
+      + [Device fingerprinter](#device)
   
 <a name="introduccion"></a>
 ## Introducción
@@ -176,17 +176,6 @@ var decidir: PaymentsTokenAPI = PaymentsTokenAPI(publicKey: publicKey, isSandbox
 // ...codigo...
 }
 ```
-
-[<sub>Volver a inicio</sub>](#inicio)
-
-<a name="device"></a>
-
-## Device FingerPrint
-El **Device Fingerprint (DF)** es la huella digital del dispositivo que realiza la transacción. 
-Es un dato muy importante que se tiene en cuenta en el proceso de validación
-Para acceder a la documentación: 
-https://decidir.api-docs.io/1.0/prevencion-de-fraude-by-cybersource/cs_device_fingerprint
-
 
 [<sub>Volver a inicio</sub>](#inicio)
 
@@ -371,5 +360,15 @@ self.decidir.createPaymentCardToken(paymentCardToken: pct) { (paymentToken, erro
   }
 }
 ```
+[<sub>Volver a inicio</sub>](#inicio)
+<a name="device"></a>
+
+## Device FingerPrint
+El **Device Fingerprint (DF)** es la huella digital del dispositivo que realiza la transacción. 
+Es un dato muy importante que se tiene en cuenta en el proceso de validación
+Para acceder a la documentación: 
+https://decidir.api-docs.io/1.0/prevencion-de-fraude-by-cybersource/cs_device_fingerprint
+
+
 [<sub>Volver a inicio</sub>](#inicio)
 
