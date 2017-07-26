@@ -70,7 +70,8 @@ Los resúmenes correspondientes a los cierres de lotes automáticos efectuados p
 En caso de que el comercio opte por recibir los resúmenes vía e-mail, debe indicarnos a qué dirección o direcciones de correo electrónico desea recibir tales archivos.
 En caso de que el comercio opte por recibir los resúmenes vía FTP o SFTP, debe indicarnos los siguientes datos: URL del servidor, usuario y clave.
 
-LINK
+Para mas informacion consultar en :
+https://decidir.api-docs.io/1.0/introduccion/cierre-de-lote
 
 
 [<sub>Volver a inicio</sub>](#inicio)
