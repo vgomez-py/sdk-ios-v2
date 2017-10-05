@@ -13,6 +13,8 @@ open class PaymentToken: JSONEncodable {
     public var securityCode: String?
     public var cardHolderName: String?
     public var cardHolderIdentification: CardHolderIdentification?
+    public var cardHolderBirthday: String?
+    public var cardHolderDoorNumber: String?
     public var fraudDetection: FraudDetection?
 
     public init() {
@@ -23,6 +25,9 @@ open class PaymentToken: JSONEncodable {
         self.securityCode = ""
         self.cardHolderName = ""
         self.cardHolderIdentification = CardHolderIdentification()
+        self.cardHolderBirthday = ""
+        self.cardHolderDoorNumber = ""
+        self.fraudDetection = FraudDetection()
     }
 
     // MARK: JSONEncodable
@@ -34,6 +39,8 @@ open class PaymentToken: JSONEncodable {
         nillableDictionary["security_code"] = self.securityCode
         nillableDictionary["card_holder_name"] = self.cardHolderName
         nillableDictionary["card_holder_identification"] = self.cardHolderIdentification?.encodeToJSON()
+        nillableDictionary["card_holder_birthday"] = self.cardHolderBirthday
+        nillableDictionary["card_holder_door_number"] = self.cardHolderDoorNumber
         nillableDictionary["fraud_detection"] = self.fraudDetection?.encodeToJSON()
         let dictionary: [String:Any] = APIHelper.rejectNil(nillableDictionary) ?? [:]
         return dictionary
