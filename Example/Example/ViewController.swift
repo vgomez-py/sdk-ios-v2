@@ -9,7 +9,10 @@
 import UIKit
 import sdk_ios_v2
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, CyberSourceDelegate {
+    
+    var cyberSource:CyberSource?
+    var sessionId: String?
 
     //MARK: Properties
     @IBOutlet weak var cardNumber: UITextField!
@@ -34,6 +37,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         cardHolderName.delegate = self
         docType.delegate = self
         docNumber.delegate = self
+        
+        self.cyberSource = CyberSource()
+        self.cyberSource?.delegate = self
+        self.cyberSource?.auth(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
+        
+    }
+    
+    func authFinished(sessionId: String) {
+        NSLog("Session id created: %s", sessionId)
+        self.sessionId = sessionId
     }
     
     @IBAction func proceedPayment(_ sender: UIButton) {
@@ -43,10 +56,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         pti.cardExpirationYear = expirationYear.text
         pti.cardHolderName = cardHolderName.text
         pti.securityCode = securityCode.text
+        pti.fraudDetection = FraudDetection()
+        pti.fraudDetection!.deviceUniqueIdentifier = self.sessionId
         
         let holder = CardHolderIdentification()
         holder.type = docType.text
         holder.number = docNumber.text
+        
+        pti.cardHolderDoorNumber = 3
+        pti.cardHolderBirthday = "16082017"
         
         pti.cardHolderIdentification = holder
         

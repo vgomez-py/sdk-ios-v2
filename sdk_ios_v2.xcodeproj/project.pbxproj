@@ -11,6 +11,7 @@
 		6408B4825C46B4E0C3409759 /* Pods_sdk_ios_v2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9113A655DFF19FB4088E24C5 /* Pods_sdk_ios_v2Tests.framework */; };
 		B917D56B1F171E5F009BD4D0 /* TrustDefenderMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */; };
 		B917D56E1F178A1B009BD4D0 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D56D1F178A1B009BD4D0 /* libz.1.dylib */; };
+		B91B9B3B1F85D429004749C2 /* TrustDefenderMobile.framework in Resources */ = {isa = PBXBuildFile; fileRef = B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */; };
 		B992F9281F170D8100B71C6A /* sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B992F91E1F170D8100B71C6A /* sdk_ios_v2.framework */; };
 		B992F92F1F170D8100B71C6A /* sdk_ios_v2.h in Headers */ = {isa = PBXBuildFile; fileRef = B992F9211F170D8100B71C6A /* sdk_ios_v2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B992F93C1F170F9900B71C6A /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F93B1F170F9900B71C6A /* APIs.swift */; };
@@ -303,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91B9B3B1F85D429004749C2 /* TrustDefenderMobile.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

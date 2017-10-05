@@ -12,12 +12,13 @@ import sdk_ios_v2
 class HomeViewController: UIViewController, CyberSourceDelegate {
     
     var cyberSource:CyberSource?
+    var sessionId: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cyberSource = CyberSource()
         self.cyberSource?.delegate = self
-        self.cyberSource?.auth(publicKey: "e9cdb99fff374b5f91da4480c8dca741")
+        self.cyberSource?.auth(publicKey: "e9cdb99fff374b5f91da4480c8dca741", isSandbox: true)
         // Do any additional setup after loading the view.
     }
 
@@ -28,6 +29,7 @@ class HomeViewController: UIViewController, CyberSourceDelegate {
     
     func authFinished(sessionId: String) {
         NSLog("Session id created: %s", sessionId)
+        self.sessionId = sessionId
     }
 
     @IBAction func cardTokenButtonTapped(_ sender: UIButton) {
