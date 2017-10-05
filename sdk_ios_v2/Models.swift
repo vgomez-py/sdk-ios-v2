@@ -159,6 +159,8 @@ class Decoders {
             let instance = CardHolder()
             instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"] as AnyObject?)
             instance.identification = Decoders.decodeOptional(clazz: CardHolderIdentification.self, source: sourceDictionary["identification"] as AnyObject?)
+            instance.birthday = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["birthday"] as AnyObject?)
+            instance.nro_puerta = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["nro_puerta"] as AnyObject?)
             return instance
         }
 

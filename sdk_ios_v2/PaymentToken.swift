@@ -14,7 +14,7 @@ open class PaymentToken: JSONEncodable {
     public var cardHolderName: String?
     public var cardHolderIdentification: CardHolderIdentification?
     public var cardHolderBirthday: String?
-    public var cardHolderDoorNumber: String?
+    public var cardHolderDoorNumber: Double?
     public var fraudDetection: FraudDetection?
 
     public init() {
@@ -26,7 +26,7 @@ open class PaymentToken: JSONEncodable {
         self.cardHolderName = ""
         self.cardHolderIdentification = CardHolderIdentification()
         self.cardHolderBirthday = ""
-        self.cardHolderDoorNumber = ""
+        self.cardHolderDoorNumber = 0
         self.fraudDetection = FraudDetection()
     }
 

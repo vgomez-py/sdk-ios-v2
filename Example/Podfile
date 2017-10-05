@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'Example' do
   pod 'sdk_ios_v2', :path => '../'
-
+  
   target 'ExampleTests' do
     inherit! :search_paths
 
