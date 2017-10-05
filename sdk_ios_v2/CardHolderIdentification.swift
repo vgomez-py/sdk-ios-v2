@@ -23,4 +23,16 @@ open class CardHolderIdentification: JSONEncodable {
         let dictionary: [String:Any] = APIHelper.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }
+    
+    open func toString() -> String {
+        
+        var cardHolderIdentificationText = "[\n"
+        
+        cardHolderIdentificationText += "type: \(self.type!) \n"
+        cardHolderIdentificationText += "number: \(self.number!) \n"
+        
+        cardHolderIdentificationText += "]"
+        
+        return cardHolderIdentificationText
+    }
 }

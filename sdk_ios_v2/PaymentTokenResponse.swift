@@ -48,6 +48,7 @@ open class PaymentTokenResponse: JSONEncodable {
         paymentTokenText += "lastFourDigits: \(self.lastFourDigits!) \n"
         paymentTokenText += "dateCreated \(self.dateCreated!) \n"
         paymentTokenText += "dateDue \(self.dateDue!) \n"
+        paymentTokenText += "cardHolder \(self.cardholder!.toString()) \n"
         
         
         paymentTokenText += "]"
