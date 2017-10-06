@@ -50,6 +50,18 @@ open class PaymentsTokenAPI: APIBase {
     }
     
     /**
+     Creates a new payment offline token
+     
+     - parameter paymentOfflineToken: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open func createPaymentOfflineToken(paymentTokenOffline: PaymentTokenOffline? = nil, completion: @escaping ((_ data: PaymentTokenResponse?,_ error: Error?) -> Void)) {
+        self.tokensOfflinePostWithRequestBuilder(paymentTokenOffline: paymentTokenOffline).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+    
+    /**
      Creates a request builder for payment token
      
      - parameter paymentToken: (body)  (optional)
@@ -68,6 +80,17 @@ open class PaymentsTokenAPI: APIBase {
      */
     func tokensCardPostWithRequestBuilder(paymentCardToken: PaymentCardToken? = nil) -> RequestBuilder<PaymentTokenResponse>  {
         let parameters = paymentCardToken?.encodeToJSON() as? [String:AnyObject]
+        return proceedPayment(parameters: parameters)
+    }
+    
+    /**
+     Creates a request builder for payment offline token
+     
+     - parameter paymentOfflineToken: (body)  (optional)
+     - returns: RequestBuilder<PaymentTokenResponse>
+     */
+    func tokensOfflinePostWithRequestBuilder(paymentTokenOffline: PaymentTokenOffline? = nil) -> RequestBuilder<PaymentTokenResponse>  {
+        let parameters = paymentTokenOffline?.encodeToJSON() as? [String:AnyObject]
         return proceedPayment(parameters: parameters)
     }
     

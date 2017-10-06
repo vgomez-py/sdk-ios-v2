@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5325841222E0A2C4FC0094B2 /* Pods_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EF67FBFF60EDFD48A2B006 /* Pods_ExampleTests.framework */; };
-		B91B9B401F85D563004749C2 /* sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91B9B3F1F85D563004749C2 /* sdk_ios_v2.framework */; };
-		B91B9B411F85D563004749C2 /* sdk_ios_v2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B91B9B3F1F85D563004749C2 /* sdk_ios_v2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B91B9B691F8734DF004749C2 /* OfflineTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9B681F8734DF004749C2 /* OfflineTokenViewController.swift */; };
 		B928BA221EB3C71900398867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BA211EB3C71900398867 /* AppDelegate.swift */; };
 		B928BA291EB3C71900398867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B928BA281EB3C71900398867 /* Assets.xcassets */; };
 		B928BA2C1EB3C71900398867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B928BA2A1EB3C71900398867 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,7 @@
 		B928BA801EB3CCD500398867 /* CardTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BA7E1EB3CCD500398867 /* CardTokenViewController.swift */; };
 		B928BA811EB3CCD500398867 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928BA7F1EB3CCD500398867 /* HomeViewController.swift */; };
 		B928BA831EB3CD3800398867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B928BA821EB3CD3800398867 /* Main.storyboard */; };
+		FA4E1DF8289F213A96EA5CB8 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED54291AF757D82C8232FB4B /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,25 +30,12 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		B91B9B421F85D563004749C2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B91B9B411F85D563004749C2 /* sdk_ios_v2.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		3B627005DE251E3708AB1DDF /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		9ACB9F7E88A3BD8250AC9D7B /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		B91B9B3F1F85D563004749C2 /* sdk_ios_v2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sdk_ios_v2.framework; sourceTree = "<group>"; };
 		B91B9B431F85D5A8004749C2 /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefenderMobile.framework; sourceTree = "<group>"; };
+		B91B9B621F873309004749C2 /* sdk_ios_v2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sdk_ios_v2.framework; path = "../../../Library/Developer/Xcode/DerivedData/Example-gelyclnvxhewvhgmmrfwihkvnyac/Build/Products/Debug-iphonesimulator/sdk_ios_v2/sdk_ios_v2.framework"; sourceTree = "<group>"; };
+		B91B9B681F8734DF004749C2 /* OfflineTokenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineTokenViewController.swift; sourceTree = "<group>"; };
 		B92841531EBA091E005DB4AF /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		B928BA1E1EB3C71900398867 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928BA211EB3C71900398867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91B9B401F85D563004749C2 /* sdk_ios_v2.framework in Frameworks */,
+				FA4E1DF8289F213A96EA5CB8 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				B91B9B431F85D5A8004749C2 /* TrustDefenderMobile.framework */,
-				B91B9B3F1F85D563004749C2 /* sdk_ios_v2.framework */,
 				B928BA201EB3C71900398867 /* Example */,
 				B928BA351EB3C71900398867 /* ExampleTests */,
 				B928BA1F1EB3C71900398867 /* Products */,
@@ -126,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B928BA821EB3CD3800398867 /* Main.storyboard */,
+				B91B9B681F8734DF004749C2 /* OfflineTokenViewController.swift */,
 				B928BA7E1EB3CCD500398867 /* CardTokenViewController.swift */,
 				B928BA7F1EB3CCD500398867 /* HomeViewController.swift */,
 				B928BA7C1EB3CC8800398867 /* ViewController.swift */,
@@ -149,6 +136,7 @@
 		B928BA9A1EB3D1D400398867 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B91B9B621F873309004749C2 /* sdk_ios_v2.framework */,
 				B92841531EBA091E005DB4AF /* libz.1.dylib */,
 				B928BA9B1EB3D1D400398867 /* XCTest.framework */,
 				ED54291AF757D82C8232FB4B /* Pods_Example.framework */,
@@ -170,7 +158,6 @@
 				B928BA1C1EB3C71900398867 /* Resources */,
 				04CBC39656F438A6BB9E26E0 /* [CP] Embed Pods Frameworks */,
 				837E77A7F7A77F1CC15B7C90 /* [CP] Copy Pods Resources */,
-				B91B9B421F85D563004749C2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,6 +353,7 @@
 				B928BA221EB3C71900398867 /* AppDelegate.swift in Sources */,
 				B928BA801EB3CCD500398867 /* CardTokenViewController.swift in Sources */,
 				B928BA811EB3CCD500398867 /* HomeViewController.swift in Sources */,
+				B91B9B691F8734DF004749C2 /* OfflineTokenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
