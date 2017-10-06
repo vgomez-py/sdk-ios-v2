@@ -32,6 +32,10 @@ class HomeViewController: UIViewController, CyberSourceDelegate {
         self.sessionId = sessionId
     }
 
+    @IBAction func offlineTokenButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "offlineToken", sender: self)
+    }
+
     @IBAction func cardTokenButtonTapped(_ sender: UIButton) {
         
         performSegue(withIdentifier: "tokenPayment", sender: self)

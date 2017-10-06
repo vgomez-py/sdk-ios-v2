@@ -267,6 +267,34 @@ class Decoders {
             instance.fraudDetection = Decoders.decodeOptional(clazz: FraudDetection.self, source: sourceDictionary["fraud_detection"] as AnyObject?)
             return instance
         }
+        // Decoder for [PaymentTokenOffline]
+        Decoders.addDecoder(clazz: [PaymentTokenOffline].self) { (source: AnyObject) -> [PaymentTokenOffline] in
+            return Decoders.decode(clazz: [PaymentTokenOffline].self, source: source)
+        }
+        
+        // Decoder for PaymentTokenOffline
+        Decoders.addDecoder(clazz: PaymentTokenOffline.self) { (source: AnyObject) -> PaymentTokenOffline in
+            let sourceDictionary = source as! [AnyHashable: Any]
+            
+            let instance = PaymentTokenOffline()
+            instance.customer = Decoders.decodeOptional(clazz: Customer.self, source: sourceDictionary["customer"] as AnyObject?)
+            return instance
+        }
+        
+        // Decoder for [Customer]
+        Decoders.addDecoder(clazz: [Customer].self) { (source: AnyObject) -> [Customer] in
+            return Decoders.decode(clazz: [Customer].self, source: source)
+        }
+        
+        // Decoder for Customer
+        Decoders.addDecoder(clazz: Customer.self) { (source: AnyObject) -> Customer in
+            let sourceDictionary = source as! [AnyHashable: Any]
+            
+            let instance = Customer()
+            instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"] as AnyObject?)
+            instance.identification = Decoders.decodeOptional(clazz: CardHolderIdentification.self, source: sourceDictionary["identification"] as AnyObject?)
+            return instance
+        }
 
         // Decoder for [FraudDetectionConfig]
         Decoders.addDecoder(clazz: [FraudDetectionConfig].self) { (source: AnyObject) -> [FraudDetectionConfig] in

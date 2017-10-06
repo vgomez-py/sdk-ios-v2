@@ -12,11 +12,14 @@
 		B917D56B1F171E5F009BD4D0 /* TrustDefenderMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */; };
 		B917D56E1F178A1B009BD4D0 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B917D56D1F178A1B009BD4D0 /* libz.1.dylib */; };
 		B91B9B3B1F85D429004749C2 /* TrustDefenderMobile.framework in Resources */ = {isa = PBXBuildFile; fileRef = B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */; };
+		B91B9B581F872E66004749C2 /* PaymentTokenOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9B571F872E66004749C2 /* PaymentTokenOffline.swift */; };
+		B91B9B5A1F872F66004749C2 /* PaymentsTokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9B591F872F66004749C2 /* PaymentsTokenAPI.swift */; };
+		B91B9B5C1F873007004749C2 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9B5B1F873007004749C2 /* Customer.swift */; };
+		B91B9B5E1F87313D004749C2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9B5D1F87313D004749C2 /* Models.swift */; };
 		B992F9281F170D8100B71C6A /* sdk_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B992F91E1F170D8100B71C6A /* sdk_ios_v2.framework */; };
 		B992F92F1F170D8100B71C6A /* sdk_ios_v2.h in Headers */ = {isa = PBXBuildFile; fileRef = B992F9211F170D8100B71C6A /* sdk_ios_v2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B992F93C1F170F9900B71C6A /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F93B1F170F9900B71C6A /* APIs.swift */; };
 		B992F93E1F170FA800B71C6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F93D1F170FA800B71C6A /* Extensions.swift */; };
-		B992F9401F170FB100B71C6A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F93F1F170FB100B71C6A /* Models.swift */; };
 		B992F9431F170FBB00B71C6A /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9411F170FBB00B71C6A /* AlamofireImplementations.swift */; };
 		B992F9441F170FBB00B71C6A /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9421F170FBB00B71C6A /* APIHelper.swift */; };
 		B992F94F1F170FD500B71C6A /* CardHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9461F170FD500B71C6A /* CardHolder.swift */; };
@@ -29,7 +32,6 @@
 		B992F9561F170FD500B71C6A /* PaymentTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F94D1F170FD500B71C6A /* PaymentTokenResponse.swift */; };
 		B992F9571F170FD500B71C6A /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F94E1F170FD500B71C6A /* ValidationError.swift */; };
 		B992F95B1F170FF100B71C6A /* FraudDetectionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9591F170FF100B71C6A /* FraudDetectionAPI.swift */; };
-		B992F95C1F170FF100B71C6A /* PaymentsTokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F95A1F170FF100B71C6A /* PaymentsTokenAPI.swift */; };
 		B992F95F1F17138B00B71C6A /* sdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F95E1F17138B00B71C6A /* sdkTests.swift */; };
 		B992F9611F1716E300B71C6A /* CyberSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992F9601F1716E300B71C6A /* CyberSource.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,10 @@
 		A9AB0FD55BF766C260AB889D /* Pods-sdk_ios_v2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2Tests/Pods-sdk_ios_v2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B917D56A1F171E5F009BD4D0 /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefenderMobile.framework; sourceTree = "<group>"; };
 		B917D56D1F178A1B009BD4D0 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		B91B9B571F872E66004749C2 /* PaymentTokenOffline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenOffline.swift; sourceTree = "<group>"; };
+		B91B9B591F872F66004749C2 /* PaymentsTokenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsTokenAPI.swift; sourceTree = "<group>"; };
+		B91B9B5B1F873007004749C2 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		B91B9B5D1F87313D004749C2 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B992F91E1F170D8100B71C6A /* sdk_ios_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sdk_ios_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B992F9211F170D8100B71C6A /* sdk_ios_v2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sdk_ios_v2.h; sourceTree = "<group>"; };
 		B992F9221F170D8100B71C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +65,6 @@
 		B992F92E1F170D8100B71C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B992F93B1F170F9900B71C6A /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		B992F93D1F170FA800B71C6A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		B992F93F1F170FB100B71C6A /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B992F9411F170FBB00B71C6A /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
 		B992F9421F170FBB00B71C6A /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		B992F9461F170FD500B71C6A /* CardHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHolder.swift; sourceTree = "<group>"; };
@@ -72,7 +77,6 @@
 		B992F94D1F170FD500B71C6A /* PaymentTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenResponse.swift; sourceTree = "<group>"; };
 		B992F94E1F170FD500B71C6A /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		B992F9591F170FF100B71C6A /* FraudDetectionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraudDetectionAPI.swift; sourceTree = "<group>"; };
-		B992F95A1F170FF100B71C6A /* PaymentsTokenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsTokenAPI.swift; sourceTree = "<group>"; };
 		B992F95E1F17138B00B71C6A /* sdkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sdkTests.swift; sourceTree = "<group>"; };
 		B992F9601F1716E300B71C6A /* CyberSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyberSource.swift; sourceTree = "<group>"; };
 		C1797C188C6AAC0DEA3B7AF6 /* Pods-sdk_ios_v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk_ios_v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdk_ios_v2/Pods-sdk_ios_v2.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,7 +173,7 @@
 				B992F9581F170FE300B71C6A /* APIs */,
 				B992F9451F170FC900B71C6A /* Models */,
 				B992F93D1F170FA800B71C6A /* Extensions.swift */,
-				B992F93F1F170FB100B71C6A /* Models.swift */,
+				B91B9B5D1F87313D004749C2 /* Models.swift */,
 				B992F9411F170FBB00B71C6A /* AlamofireImplementations.swift */,
 				B992F9421F170FBB00B71C6A /* APIHelper.swift */,
 				B992F93B1F170F9900B71C6A /* APIs.swift */,
@@ -180,6 +184,7 @@
 		B992F9451F170FC900B71C6A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B91B9B571F872E66004749C2 /* PaymentTokenOffline.swift */,
 				B992F9461F170FD500B71C6A /* CardHolder.swift */,
 				B992F9471F170FD500B71C6A /* CardHolderIdentification.swift */,
 				B992F9481F170FD500B71C6A /* FraudDetection.swift */,
@@ -189,6 +194,7 @@
 				B992F94C1F170FD500B71C6A /* PaymentToken.swift */,
 				B992F94D1F170FD500B71C6A /* PaymentTokenResponse.swift */,
 				B992F94E1F170FD500B71C6A /* ValidationError.swift */,
+				B91B9B5B1F873007004749C2 /* Customer.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -196,8 +202,8 @@
 		B992F9581F170FE300B71C6A /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				B91B9B591F872F66004749C2 /* PaymentsTokenAPI.swift */,
 				B992F9591F170FF100B71C6A /* FraudDetectionAPI.swift */,
-				B992F95A1F170FF100B71C6A /* PaymentsTokenAPI.swift */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -405,16 +411,18 @@
 				B992F9531F170FD500B71C6A /* ModelError.swift in Sources */,
 				B992F9501F170FD500B71C6A /* CardHolderIdentification.swift in Sources */,
 				B992F9551F170FD500B71C6A /* PaymentToken.swift in Sources */,
-				B992F9401F170FB100B71C6A /* Models.swift in Sources */,
+				B91B9B581F872E66004749C2 /* PaymentTokenOffline.swift in Sources */,
 				B992F95B1F170FF100B71C6A /* FraudDetectionAPI.swift in Sources */,
 				B992F9561F170FD500B71C6A /* PaymentTokenResponse.swift in Sources */,
 				B992F93C1F170F9900B71C6A /* APIs.swift in Sources */,
 				B992F9431F170FBB00B71C6A /* AlamofireImplementations.swift in Sources */,
 				B992F9571F170FD500B71C6A /* ValidationError.swift in Sources */,
+				B91B9B5C1F873007004749C2 /* Customer.swift in Sources */,
 				B992F9611F1716E300B71C6A /* CyberSource.swift in Sources */,
 				B992F94F1F170FD500B71C6A /* CardHolder.swift in Sources */,
 				B992F9541F170FD500B71C6A /* PaymentCardToken.swift in Sources */,
-				B992F95C1F170FF100B71C6A /* PaymentsTokenAPI.swift in Sources */,
+				B91B9B5E1F87313D004749C2 /* Models.swift in Sources */,
+				B91B9B5A1F872F66004749C2 /* PaymentsTokenAPI.swift in Sources */,
 				B992F9441F170FBB00B71C6A /* APIHelper.swift in Sources */,
 				B992F93E1F170FA800B71C6A /* Extensions.swift in Sources */,
 			);
