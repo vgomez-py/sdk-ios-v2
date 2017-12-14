@@ -294,6 +294,8 @@ self.decidir.createPaymentCardToken(paymentCardToken: pct) { (paymentTokenRespon
 
 ## Integración con Cybersource
 
+> **IMPORTANTE:** Para usar `Cybersource` es necesario modificar la configuración del proyecto. Seleccionar el/los target/s correspondiente/s y en `Build Settings` agregar a `Framework Search Paths` una nueva entrada con el texto `$PODS_ROOT/sdk_ios_v2`.
+
 Para habilitar el Servicio de Control de Fraude Cybersource, la vista inicial de su aplicaci&oacute;n deber&aacute; extenderla de `CyberSourceDelegate`. Luego al finalizar la carga de su vista, invocar&aacute; a CyberSource con su public APIKey y se le devolver&aacute; un **sessionId** correspondiente al dispositivo. Este **sessionId** debe enviarse a Decidir al momento de generar un token de pago.
 
 A continuaci&oacute;n se ejemplifica la integraci&oacute;n en la vista.
