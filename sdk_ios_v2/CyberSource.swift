@@ -11,7 +11,7 @@ import TrustDefenderMobile
  Delegate to ensure session id is created
  */
 @objc public protocol CyberSourceDelegate{
-    @objc optional func authFinished(sessionId:String)
+    @objc optional func authFinished(sessionId: String)
 }
 
 open class CyberSource: UIViewController, CyberSourceDelegate {
@@ -28,32 +28,40 @@ open class CyberSource: UIViewController, CyberSourceDelegate {
     open func auth(publicKey: String, isSandbox: Bool = false) {
         
         FraudDetectionAPI(publicKey: publicKey, isSandbox: isSandbox).getConfig { (fraudDetectionConfig, error) in
-            
             guard error == nil else {
-                NSLog("There was an error trying to get config")
-                return
+                return self.notifyErrorOnDelegate("Error on FraudDetectionAPI.getConfig")
             }
             
-            if let fraudDetectionConfig = fraudDetectionConfig {
-                
-                self.profile =
-                    TrustDefenderMobile(config: [
-                        TDMOrgID: fraudDetectionConfig.orgId!,
-                        TDMLocationServices: NSNumber(value: true)])
-                self.profile?.doProfileRequest(callback: { (response) in
-                    // call custom delegation when session id is created
-                    if let response = response {
-                        guard response["profile_status"] as! Int == 1 else {
-                            NSLog("There was an error trying to request profile.")
-                            return
-                        }
-                        
-                        self.delegate?.authFinished!(sessionId:response["session_id"] as! String )
-                    }
-                })
-                
+            guard let fraudDetectionConfig = fraudDetectionConfig else  {
+                return self.notifyErrorOnDelegate("No fraudDetectionConfig on FraudDetectionAPI.getConfig response")
             }
+            
+            self.profile = TrustDefenderMobile(config: [
+                    TDMOrgID: fraudDetectionConfig.orgId!,
+                    TDMLocationServices: NSNumber(value: true)])
+            
+            self.profile?.doProfileRequest(callback: { (response) in
+                // call custom delegation when session id is created
+                guard let response = response else {
+                    return self.notifyErrorOnDelegate("No response on TrustDefenderMobile.doProfileRequest")
+                }
+                
+                guard response["profile_status"] as! Int == 1 else {
+                    return self.notifyErrorOnDelegate("No profile_status on TrustDefenderMobile.doProfileRequest")
+                }
+                
+                guard let sessionId = response["session_id"] as? String else {
+                    return self.notifyErrorOnDelegate("No session_id on TrustDefenderMobile.doProfileRequest")
+                }
+                
+                self.delegate?.authFinished!(sessionId: sessionId)
+            })
         }
+    }
+    
+    private func notifyErrorOnDelegate(_ errorString: String) {
+        NSLog(errorString)
+        self.delegate?.authFinished!(sessionId: "")
     }
 }
 
