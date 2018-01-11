@@ -35,44 +35,26 @@ open class CyberSource: UIViewController, CyberSourceDelegate {
             }
             
             if let fraudDetectionConfig = fraudDetectionConfig {
-            
+                
                 self.profile =
                     TrustDefenderMobile(config: [
                         TDMOrgID: fraudDetectionConfig.orgId!,
-                        TDMDelegate: self,
                         TDMLocationServices: NSNumber(value: true)])
+                self.profile?.doProfileRequest(callback: { (response) in
+                    // call custom delegation when session id is created
+                    if let response = response {
+                        guard response["profile_status"] as! Int == 1 else {
+                            NSLog("There was an error trying to request profile.")
+                            return
+                        }
+                        
+                        self.delegate?.authFinished!(sessionId:response["session_id"] as! String )
+                    }
+                })
                 
-                self.profile?.doProfileRequest()
-            
             }
         }
-    }
-    
-    /*
-     Delegate implementation that call custom delegation when 
-     session id is created
-     
-     - parameter response: TrustDefender response
-     */
-    func profileComplete(_ response:[AnyHashable:Any]?) {
-        
-        if let response = response {
-            
-            guard response["profile_status"] as! Int == 1 else {
-                NSLog("There was an error trying to request profile.")
-                return
-            }
-            
-            self.delegate?.authFinished!(sessionId:response["session_id"] as! String )
-        }
-    }
-    
-    override open func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override open func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
+
+
