@@ -16,9 +16,9 @@ open class PaymentToken: JSONEncodable {
     public var cardHolderBirthday: String?
     public var cardHolderDoorNumber: Double?
     public var fraudDetection: FraudDetection?
-
-    public init() {
     
+    public init() {
+        
         self.cardNumber = ""
         self.cardExpirationMonth = ""
         self.cardExpirationYear = ""
@@ -29,7 +29,7 @@ open class PaymentToken: JSONEncodable {
         self.cardHolderDoorNumber = 0
         self.fraudDetection = FraudDetection()
     }
-
+    
     // MARK: JSONEncodable
     open func encodeToJSON() -> Any {
         var nillableDictionary = [String:Any?]()
@@ -39,10 +39,13 @@ open class PaymentToken: JSONEncodable {
         nillableDictionary["security_code"] = self.securityCode
         nillableDictionary["card_holder_name"] = self.cardHolderName
         nillableDictionary["card_holder_identification"] = self.cardHolderIdentification?.encodeToJSON()
-        nillableDictionary["card_holder_birthday"] = self.cardHolderBirthday
+        if let cardHolderBirthday = self.cardHolderBirthday, cardHolderBirthday.count > 0 {
+            nillableDictionary["card_holder_birthday"] = cardHolderBirthday
+        }
         nillableDictionary["card_holder_door_number"] = self.cardHolderDoorNumber
         nillableDictionary["fraud_detection"] = self.fraudDetection?.encodeToJSON()
         let dictionary: [String:Any] = APIHelper.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }
 }
+
