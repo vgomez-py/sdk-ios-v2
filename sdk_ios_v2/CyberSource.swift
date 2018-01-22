@@ -37,8 +37,8 @@ open class CyberSource: UIViewController, CyberSourceDelegate {
             }
             
             self.profile = TrustDefenderMobile(config: [
-                    TDMOrgID: fraudDetectionConfig.orgId!,
-                    TDMLocationServices: NSNumber(value: true)])
+                TDMOrgID: fraudDetectionConfig.orgId!,
+                TDMLocationServices: NSNumber(value: true)])
             
             self.profile?.doProfileRequest(callback: { (response) in
                 // call custom delegation when session id is created
@@ -54,15 +54,17 @@ open class CyberSource: UIViewController, CyberSourceDelegate {
                     return self.notifyErrorOnDelegate("No session_id on TrustDefenderMobile.doProfileRequest")
                 }
                 
-                self.delegate?.authFinished!(sessionId: sessionId)
+                OperationQueue.main.addOperation {
+                    self.delegate?.authFinished!(sessionId: sessionId)
+                }
             })
         }
     }
     
     private func notifyErrorOnDelegate(_ errorString: String) {
         NSLog(errorString)
-        self.delegate?.authFinished!(sessionId: "")
+        OperationQueue.main.addOperation {
+            self.delegate?.authFinished!(sessionId: "")
+        }
     }
 }
-
-

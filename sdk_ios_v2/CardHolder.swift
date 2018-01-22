@@ -10,9 +10,9 @@ open class CardHolder: JSONEncodable {
     public var identification: CardHolderIdentification?
     public var birthday: String?
     public var nro_puerta: Double?
-
+    
     public init() {}
-
+    
     // MARK: JSONEncodable
     open func encodeToJSON() -> Any {
         var nillableDictionary = [String:Any?]()
@@ -31,7 +31,9 @@ open class CardHolder: JSONEncodable {
         
         cardHolderText += "name: \(self.name!) \n"
         cardHolderText += "identification: \(self.identification!.toString()) \n"
-        cardHolderText += "birthday: \(self.birthday!) \n"
+        if let birthday = self.birthday {
+            cardHolderText += "birthday: \(birthday) \n"
+        }
         cardHolderText += "nro_puerta: \(self.nro_puerta!) \n"
         
         cardHolderText += "]"
@@ -39,3 +41,4 @@ open class CardHolder: JSONEncodable {
         return cardHolderText
     }
 }
+
