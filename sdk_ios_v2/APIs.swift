@@ -5,9 +5,9 @@
 import Foundation
 
 open class DecClientAPI {
-    open static var basePathSandbox = "https://developers.decidir.com/api/v1"
-    open static var basePathProduction = "https://live.decidir.com/api/v1"
-    open static var customHeaders: [String:String] = [:]
+    public static var basePathSandbox = "https://developers.decidir.com/api/v1"
+    public static var basePathProduction = "https://live.decidir.com/api/v1"
+    public static var customHeaders: [String:String] = [:]
     static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
     
     open class func getBasePath(isSandbox: Bool = false) -> String {
