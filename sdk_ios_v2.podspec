@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'sdk_ios_v2'
-s.version          = '0.2.0'
+s.version          = 'v2.0.0'
 s.summary          = 'SDK Iios spec for make payments to Decidir v2.'
 
 # This description is used to generate tags and improve search results.
