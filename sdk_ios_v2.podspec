@@ -27,7 +27,7 @@ DESC
 s.homepage         = 'https://github.com/decidir/SDK-IOS.v2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Decidir' => 'developers@decidir.com' }
-s.source           = { :git => 'https://github.com/decidir/SDK-IOS.v2.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/decidir/SDK-IOS.v2.git', :tag => s.version }
 
 s.ios.deployment_target = '10.3'
 s.library = 'z'
