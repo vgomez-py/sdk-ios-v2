@@ -32,6 +32,10 @@ class SDKTests: QuickSpec {
                 
                 pti.cardHolderIdentification = holder
                 
+                let fraudDetection = FraudDetection()
+                fraudDetection.deviceUniqueIdentifier = "12345";
+                pti.fraudDetection = fraudDetection
+                
                 paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
                     
                     expect(error).to(beNil())
@@ -67,6 +71,10 @@ class SDKTests: QuickSpec {
                 holder.number = "123123123"
                 
                 pti.cardHolderIdentification = holder
+                
+                let fraudDetection = FraudDetection()
+                fraudDetection.deviceUniqueIdentifier = "12345";
+                pti.fraudDetection = fraudDetection
                 
                 paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
                     
@@ -143,6 +151,10 @@ class SDKTests: QuickSpec {
                 
                 pti.cardHolderIdentification = holder
                 
+                let fraudDetection = FraudDetection()
+                fraudDetection.deviceUniqueIdentifier = "12345";
+                pti.fraudDetection = fraudDetection
+                
                 paymentTokenApi.createPaymentToken(paymentToken: pti) { (paymentToken, error) in
                     
                     expect(paymentToken).to(beNil())
@@ -180,6 +192,10 @@ class SDKTests: QuickSpec {
                 let pti = PaymentCardToken()
                 pti.token = "someToken"
                 pti.securityCode = "123"
+                
+                        let fraudDetection = FraudDetection()
+                        fraudDetection.deviceUniqueIdentifier = "12345";
+                       pti.fraudDetection = fraudDetection
                 
                 paymentTokenApi.createPaymentCardToken(paymentCardToken: pti) { (paymentToken, error) in
                     

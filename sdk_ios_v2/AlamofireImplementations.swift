@@ -116,10 +116,19 @@ open class AlamofireRequestBuilder<T>: RequestBuilder<T> {
                 cleanupRequest()
 
                 if stringResponse.result.isFailure {
-                    completion(
-                        nil,
-                        ErrorResponse.Error(stringResponse.response?.statusCode ?? 500, stringResponse.data, stringResponse.result.error as Error!)
-                    )
+                    if let error = stringResponse.result.error,
+                        let statusCode = stringResponse.response?.statusCode{
+                        completion(
+                            nil,
+                            ErrorResponse.Error(statusCode, stringResponse.data, error)
+                        )
+                    }else{
+                        completion(
+                            nil,
+                            ErrorResponse.Error(500, stringResponse.data, NSError(domain:"", code:500, userInfo:nil))
+                        )
+                    }
+                    
                     return
                 }
 
