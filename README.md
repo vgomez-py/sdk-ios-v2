@@ -107,7 +107,7 @@ Para integrar sdk-ios-v2 en tu proyecto Xcode usando CocoaPods, especificalo en 
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.3'
+platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
@@ -130,7 +130,7 @@ Puede importar el proyecto **Xcode** desde `sdk_ios_v2.xcworkspace` y buildearlo
 
 <a name="versionesdeiossoportadas"></a>
 ### Versiones de IOS soportadas
-La versi&oacute;n implementada de la SDK, est&aacute; testeada para versiones desde IOS 10.3
+La versi&oacute;n implementada de la SDK, est&aacute; testeada para versiones desde IOS 9.0
 
 [<sub>Volver a inicio</sub>](#inicio)
 
