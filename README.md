@@ -101,7 +101,7 @@ A continuación, se presenta un diagrama con el Flujo de un Pago.
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.5.3+ es requerido para construir sdk-ios v2.0.0
+> CocoaPods 1.5.3+ es requerido para construir sdk-ios 2.0.0
 
 Para integrar sdk-ios-v2 en tu proyecto Xcode usando CocoaPods, especificalo en tu `Podfile`:
 
