@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'sdk_ios_v2'
-s.version          = '2.0.0'
+s.version          = '2.0.1'
 s.summary          = 'SDK Iios spec for make payments to Decidir v2.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ s.source           = { :git => 'https://github.com/decidir/SDK-IOS.v2.git', :tag
 
 s.ios.deployment_target = '9.0'
 s.library = 'z'
-s.ios.vendored_frameworks = 'TrustDefenderMobile.framework'
+s.ios.vendored_frameworks = 'TrustDefender.framework'
 s.source_files = 'sdk_ios_v2/**/*'
 s.dependency 'Alamofire', '~> 4.7'
 end
