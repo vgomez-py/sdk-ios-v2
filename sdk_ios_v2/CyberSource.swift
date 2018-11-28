@@ -5,7 +5,7 @@
 // session id to sent in API requests
 //
 import UIKit
-import TrustDefenderMobile
+import TrustDefender
 
 /*
  Delegate to ensure session id is created
@@ -17,7 +17,7 @@ import TrustDefenderMobile
 open class CyberSource: UIViewController, CyberSourceDelegate {
     
     open var delegate:CyberSourceDelegate?
-    var profile:TrustDefenderMobile?
+    var profile:THMTrustDefender?
     
     /*
      Auth to the API and generate session id
@@ -36,9 +36,10 @@ open class CyberSource: UIViewController, CyberSourceDelegate {
                 return self.notifyErrorOnDelegate("No fraudDetectionConfig on FraudDetectionAPI.getConfig response")
             }
             
-            self.profile = TrustDefenderMobile(config: [
-                TDMOrgID: fraudDetectionConfig.orgId!,
-                TDMLocationServices: NSNumber(value: true)])
+            self.profile = THMTrustDefender.sharedInstance()
+            self.profile?.configure( [
+                THMOrgID: fraudDetectionConfig.orgId!,
+                THMLocationServices: NSNumber(value: true)])
             
             self.profile?.doProfileRequest(callback: { (response) in
                 // call custom delegation when session id is created
