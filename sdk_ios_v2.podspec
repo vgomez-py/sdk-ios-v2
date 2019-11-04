@@ -34,4 +34,5 @@ s.library = 'z'
 s.ios.vendored_frameworks = 'TrustDefender.framework'
 s.source_files = 'sdk_ios_v2/**/*'
 s.dependency 'Alamofire', '~> 4.7'
+s.exclude_files = 'sdk_ios_v2/**/Info.plist'
 end
